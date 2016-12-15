@@ -24,7 +24,10 @@ class Reminder2ViewController: UIViewController {
     }
 
     @IBAction func getStartedButton(sender: AnyObject) {
-        let next = self.storyboard?.instantiateViewControllerWithIdentifier("ScoreQuestion2ViewController") as! ScoreQuestion2ViewController!
+        //let next = self.storyboard?.instantiateViewControllerWithIdentifier("ScoreQuestion2ViewController") as! ScoreQuestion2ViewController!
+        //self.navigationController?.pushViewController(next, animated: true)
+        
+        let next = self.storyboard?.instantiateViewControllerWithIdentifier("MainCategoryVC") as! MainCategoryVC!
         self.navigationController?.pushViewController(next, animated: true)
     }
     

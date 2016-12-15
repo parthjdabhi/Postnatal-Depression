@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		460348188DA2348AF6EC2830 /* Pods_Postnatal_Depression.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A3AF8FDB51DA0E9D2E8AD38 /* Pods_Postnatal_Depression.framework */; };
+		5E6CD5BF1E02B50D00730CD0 /* MainCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6CD5BE1E02B50D00730CD0 /* MainCategoryVC.swift */; };
+		5E6CD5C11E02BF2100730CD0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E6CD5C01E02BF2100730CD0 /* Images.xcassets */; };
+		5E6CD5C41E02C11400730CD0 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6CD5C31E02C11400730CD0 /* CategoryTableViewCell.swift */; };
 		DA7C7A191E00DBC400F2DC7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7C7A181E00DBC400F2DC7C /* AppDelegate.swift */; };
 		DA7C7A1B1E00DBC400F2DC7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7C7A1A1E00DBC400F2DC7C /* ViewController.swift */; };
 		DA7C7A1E1E00DBC400F2DC7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA7C7A1C1E00DBC400F2DC7C /* Main.storyboard */; };
@@ -66,6 +69,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E6CD5BE1E02B50D00730CD0 /* MainCategoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCategoryVC.swift; sourceTree = "<group>"; };
+		5E6CD5C01E02BF2100730CD0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5E6CD5C31E02C11400730CD0 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		6A3AF8FDB51DA0E9D2E8AD38 /* Pods_Postnatal_Depression.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Postnatal_Depression.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB666033EA2DD32334F3FA6C /* Pods-Postnatal Depression.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Postnatal Depression.release.xcconfig"; path = "Pods/Target Support Files/Pods-Postnatal Depression/Pods-Postnatal Depression.release.xcconfig"; sourceTree = "<group>"; };
 		DA7C7A151E00DBC400F2DC7C /* Postnatal Depression.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Postnatal Depression.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,6 +164,23 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		5E6CD5BB1E02B48900730CD0 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				5E6CD5C21E02C0D900730CD0 /* Tableview Cell */,
+				5E6CD5BE1E02B50D00730CD0 /* MainCategoryVC.swift */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		5E6CD5C21E02C0D900730CD0 /* Tableview Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5E6CD5C31E02C11400730CD0 /* CategoryTableViewCell.swift */,
+			);
+			name = "Tableview Cell";
+			sourceTree = "<group>";
+		};
 		DA7C7A0C1E00DBC400F2DC7C = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +209,7 @@
 				DA7C7A181E00DBC400F2DC7C /* AppDelegate.swift */,
 				DA7C7A1A1E00DBC400F2DC7C /* ViewController.swift */,
 				DA7C7A851E011F5200F2DC7C /* Initial 4 Screens */,
+				5E6CD5BB1E02B48900730CD0 /* Categories */,
 				DA7C7A821E01199D00F2DC7C /* Scores */,
 				DA7C7A5C1E010B0000F2DC7C /* ReminderCopyViewController.swift */,
 				DA7C7A601E010C5B00F2DC7C /* ReminderNextViewController.swift */,
@@ -195,6 +219,7 @@
 				DA7C7A271E00DBC400F2DC7C /* Info.plist */,
 				DA7C7A1F1E00DBC400F2DC7C /* Postnatal_Depression.xcdatamodeld */,
 				DA7C7A4B1E00E90D00F2DC7C /* Pictures */,
+				5E6CD5C01E02BF2100730CD0 /* Images.xcassets */,
 			);
 			path = "Postnatal Depression";
 			sourceTree = "<group>";
@@ -384,6 +409,7 @@
 				DA7C7A651E010CF000F2DC7C /* NextButton.png in Resources */,
 				DA7C7A841E011C7800F2DC7C /* GreyButton.png in Resources */,
 				DA7C7A691E0111CA00F2DC7C /* LicenseBackground.png in Resources */,
+				5E6CD5C11E02BF2100730CD0 /* Images.xcassets in Resources */,
 				DA7C7A5F1E010C4A00F2DC7C /* ReminderNext.png in Resources */,
 				DA7C7A1E1E00DBC400F2DC7C /* Main.storyboard in Resources */,
 				DA7C7A6D1E0117AF00F2DC7C /* Question1Background.png in Resources */,
@@ -468,6 +494,7 @@
 				DA7C7A7B1E01197400F2DC7C /* ScoreQuestion7ViewController.swift in Sources */,
 				DA7C7A751E01196400F2DC7C /* ScoreQuestion4ViewController.swift in Sources */,
 				DA7C7A7F1E01197F00F2DC7C /* ScoreQuestion9ViewController.swift in Sources */,
+				5E6CD5BF1E02B50D00730CD0 /* MainCategoryVC.swift in Sources */,
 				DA7C7A191E00DBC400F2DC7C /* AppDelegate.swift in Sources */,
 				DA7C7A731E01195D00F2DC7C /* ScoreQuestion3ViewController.swift in Sources */,
 				DA7C7A7D1E01197A00F2DC7C /* ScoreQuestion8ViewController.swift in Sources */,
@@ -477,6 +504,7 @@
 				DA7C7A671E01111300F2DC7C /* LicenseViewController.swift in Sources */,
 				DA7C7A771E01196900F2DC7C /* ScoreQuestion5ViewController.swift in Sources */,
 				DA7C7A711E01195000F2DC7C /* ScoreQuestion2ViewController.swift in Sources */,
+				5E6CD5C41E02C11400730CD0 /* CategoryTableViewCell.swift in Sources */,
 				DA7C7A4F1E00EA0900F2DC7C /* LandingViewController.swift in Sources */,
 				DA7C7A5D1E010B0000F2DC7C /* ReminderCopyViewController.swift in Sources */,
 				DA7C7A4A1E00E27300F2DC7C /* ScoreQuestionsViewController.swift in Sources */,
