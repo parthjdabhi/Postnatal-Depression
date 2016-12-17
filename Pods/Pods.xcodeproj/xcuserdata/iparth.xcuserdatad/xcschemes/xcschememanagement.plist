@@ -6,103 +6,93 @@
 	<dict>
 		<key>APNGKit.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
-		<key>GTMSessionFetcher.xcscheme</key>
+		<key>HCSStarRatingView.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
-		</dict>
-		<key>GoogleToolboxForMac.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>IQKeyboardManagerSwift.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>4</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>JSSAlertView.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>5</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-Postnatal Depression.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>6</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>SDWebImage.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>7</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>SVProgressHUD.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>8</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>SWRevealViewController.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>9</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>UIActivityIndicator-for-SDWebImage.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>10</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>107A9565F9DF88517DFD3E28C05B2B96</key>
+		<key>1520003FEBEC114D6C84F832AFEDB994</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>16CBC51052945523699080AF7E6DAD32</key>
+		<key>2737B61583A3E6E6629CCD782026231D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3D21554A7B87E0209E88443C5BE7AA3A</key>
+		<key>2E4B8608160D9BB8F6AAAB97D5BF410D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4DC059E04CBA98AEDDB5C34E02D551E9</key>
+		<key>520C57B09A1F389645B2F5D147F0849B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B1543683D8D16F06056B1AB9E9E7DD2D</key>
+		<key>72D57DED5129BDCAEB112D61B15B08A2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BB08189C4844AEEFD8F672DAE9107970</key>
+		<key>8E3AAEA4141C66F8E7242A83A081B876</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C052BEBFBD0AB5218CC64BA3450F6547</key>
+		<key>97E5D28D3DA6F0CA23C263B2B5833B9F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CA13610E33504A6BA042FBEE7C828E03</key>
+		<key>AA5F47347F788A0A9F0D0D0371A9E51A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CE8BAF63F162178B88BBED3BDFE4DFDD</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FC97F07E9034C00304F40C48D09D7F77</key>
+		<key>C54BE1BAF746E5590F760E293F091425</key>
 		<dict>
 			<key>primary</key>
 			<true/>

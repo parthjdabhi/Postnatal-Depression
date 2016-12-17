@@ -11,6 +11,8 @@
 		5E1BB5031E040D9C005B933F /* NormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E1BB5011E040D9C005B933F /* NormalCell.xib */; };
 		5E1BB5041E040D9C005B933F /* ValuePickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E1BB5021E040D9C005B933F /* ValuePickerCell.xib */; };
 		5E1BB5061E040DA6005B933F /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1BB5051E040DA6005B933F /* CustomCell.swift */; };
+		5E58EC8A1E05544400AF3ADC /* RateActivitiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E58EC891E05544400AF3ADC /* RateActivitiesVC.swift */; };
+		5E58EC8E1E055BC700AF3ADC /* RateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E58EC8D1E055BC700AF3ADC /* RateTableViewCell.swift */; };
 		5E6CD5BF1E02B50D00730CD0 /* MainCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6CD5BE1E02B50D00730CD0 /* MainCategoryVC.swift */; };
 		5E6CD5C11E02BF2100730CD0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E6CD5C01E02BF2100730CD0 /* Images.xcassets */; };
 		5E6CD5C41E02C11400730CD0 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6CD5C31E02C11400730CD0 /* CategoryTableViewCell.swift */; };
@@ -75,6 +77,8 @@
 		5E1BB5011E040D9C005B933F /* NormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NormalCell.xib; sourceTree = "<group>"; };
 		5E1BB5021E040D9C005B933F /* ValuePickerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ValuePickerCell.xib; sourceTree = "<group>"; };
 		5E1BB5051E040DA6005B933F /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		5E58EC891E05544400AF3ADC /* RateActivitiesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateActivitiesVC.swift; sourceTree = "<group>"; };
+		5E58EC8D1E055BC700AF3ADC /* RateTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateTableViewCell.swift; sourceTree = "<group>"; };
 		5E6CD5BE1E02B50D00730CD0 /* MainCategoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCategoryVC.swift; sourceTree = "<group>"; };
 		5E6CD5C01E02BF2100730CD0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5E6CD5C31E02C11400730CD0 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -175,6 +179,7 @@
 			children = (
 				5E6CD5C21E02C0D900730CD0 /* Tableview Cell */,
 				5E6CD5BE1E02B50D00730CD0 /* MainCategoryVC.swift */,
+				5E58EC891E05544400AF3ADC /* RateActivitiesVC.swift */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -182,10 +187,11 @@
 		5E6CD5C21E02C0D900730CD0 /* Tableview Cell */ = {
 			isa = PBXGroup;
 			children = (
-				5E1BB5051E040DA6005B933F /* CustomCell.swift */,
+				5E6CD5C31E02C11400730CD0 /* CategoryTableViewCell.swift */,
+				5E58EC8D1E055BC700AF3ADC /* RateTableViewCell.swift */,
 				5E1BB5011E040D9C005B933F /* NormalCell.xib */,
 				5E1BB5021E040D9C005B933F /* ValuePickerCell.xib */,
-				5E6CD5C31E02C11400730CD0 /* CategoryTableViewCell.swift */,
+				5E1BB5051E040DA6005B933F /* CustomCell.swift */,
 			);
 			name = "Tableview Cell";
 			sourceTree = "<group>";
@@ -488,7 +494,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -512,11 +518,13 @@
 				DA7C7A7D1E01197A00F2DC7C /* ScoreQuestion8ViewController.swift in Sources */,
 				DA7C7A611E010C5B00F2DC7C /* ReminderNextViewController.swift in Sources */,
 				DA7C7A531E00EA4000F2DC7C /* Reminder2ViewController.swift in Sources */,
+				5E58EC8E1E055BC700AF3ADC /* RateTableViewCell.swift in Sources */,
 				DA7C7A211E00DBC400F2DC7C /* Postnatal_Depression.xcdatamodeld in Sources */,
 				DA7C7A671E01111300F2DC7C /* LicenseViewController.swift in Sources */,
 				DA7C7A771E01196900F2DC7C /* ScoreQuestion5ViewController.swift in Sources */,
 				DA7C7A711E01195000F2DC7C /* ScoreQuestion2ViewController.swift in Sources */,
 				5E6CD5C41E02C11400730CD0 /* CategoryTableViewCell.swift in Sources */,
+				5E58EC8A1E05544400AF3ADC /* RateActivitiesVC.swift in Sources */,
 				DA7C7A4F1E00EA0900F2DC7C /* LandingViewController.swift in Sources */,
 				DA7C7A5D1E010B0000F2DC7C /* ReminderCopyViewController.swift in Sources */,
 				DA7C7A4A1E00E27300F2DC7C /* ScoreQuestionsViewController.swift in Sources */,

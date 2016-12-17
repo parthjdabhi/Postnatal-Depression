@@ -11,9 +11,10 @@ import UIKit
 class MainCategoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tblCategory: UITableView!
+    @IBOutlet weak var btnNext: UIButton!
     
     var categories:Array<String> = ["category 1","category 2","category 3","category 4"]
-    var items:Dictionary<String,AnyObject> = ["category 1":["cat 11", "cat 12","cat 13", "cat 14"],"category 2":["cat 21", "cat 22","cat 23"],"category 3":["cat 31", "cat 32","cat 33", "cat 34"],"category 4":["cat 41", "cat 42"]]
+    var items:Dictionary<String,AnyObject> = ["category 1":["cat 11", "cat 12"],"category 2":["cat 21", "cat 22","cat 23"],"category 3":["cat 31", "cat 32","cat 33", "cat 34"],"category 4":["cat 41", "cat 42", "cat 43"]]
     var selectedSections:Array<Int> = []
     
     override func viewDidLoad() {
@@ -22,6 +23,9 @@ class MainCategoryVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Do any additional setup after loading the view.
         
         //self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
+        btnNext.layer.cornerRadius = (btnNext.frame.height/2)
+        btnNext.layer.masksToBounds = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -72,12 +76,22 @@ class MainCategoryVC: UIViewController, UITableViewDelegate, UITableViewDataSour
             
             cell.lblCategoryTitle?.text = "Category \(indexPath.section+1) \(indexPath.row+1)"
             
-            cell.imgStatus.backgroundColor = UIColor.lightTextColor()
-            cell.imgStatus.layer.cornerRadius = (cell.imgStatus.frame.width/2)
-            cell.imgStatus.layer.masksToBounds = true
+            cell.imgCategory.backgroundColor = UIColor.grayColor()
+            cell.imgCategory.layer.cornerRadius = (cell.imgCategory.frame.width/2)
+            cell.imgCategory.layer.masksToBounds = true
             
             cell.imgStatus.hidden = false
             cell.imgCategory.hidden = false
+            
+            if selectedSections.contains(indexPath.section) {
+                UIView.animateWithDuration(0.2, animations: {
+                    cell.imgStatus.transform = CGAffineTransformMakeRotation(CGFloat(M_PI * 2.5));
+                })
+            } else {
+                UIView.animateWithDuration(0.2, animations: {
+                    cell.imgStatus.transform = CGAffineTransformMakeRotation(CGFloat(M_PI * 2.0));
+                })
+            }
             
             return cell
         } else {
@@ -89,9 +103,6 @@ class MainCategoryVC: UIViewController, UITableViewDelegate, UITableViewDataSour
             
             cell.imgStatus.hidden = true
             cell.imgCategory.hidden = true
-            cell.imgCategory.backgroundColor = UIColor.lightTextColor()
-            cell.imgCategory.layer.cornerRadius = (cell.imgStatus.frame.width/2)
-            cell.imgCategory.layer.masksToBounds = true
             
             return cell
         }
@@ -104,18 +115,36 @@ class MainCategoryVC: UIViewController, UITableViewDelegate, UITableViewDataSour
 //            return
 //        }
         
+        var currentCell:CategoryTableViewCell?
+        if let indexPath = tableView.indexPathForSelectedRow {
+            currentCell = tableView.cellForRowAtIndexPath(indexPath) as? CategoryTableViewCell
+            print(currentCell?.lblCategoryTitle.text)
+        }
+        
+        
+        
+        
         if selectedSections.contains(indexPath.section) {
             if indexPath.row == 0 {
+                UIView.animateWithDuration(0.2, animations: {
+                    currentCell?.imgStatus.transform = CGAffineTransformMakeRotation(CGFloat(M_PI * 2.0));
+                })
                 //Unselect section
                 selectedSections.removeAtIndex(selectedSections.indexOf(indexPath.section) ?? 0)
                 //self.tblCategory.reloadData()
                 self.tblCategory.reloadSections(NSIndexSet(index: indexPath.section), withRowAnimation: UITableViewRowAnimation.Fade)
             } else {
                 //Value Selected
+                print(currentCell?.lblCategoryTitle.text)
                 
+                let next = self.storyboard?.instantiateViewControllerWithIdentifier("RateActivitiesVC") as! RateActivitiesVC!
+                self.navigationController?.pushViewController(next, animated: true)
             }
         } else {
             //Expand submenu
+            UIView.animateWithDuration(0.2, animations: {
+                currentCell?.imgStatus.transform = CGAffineTransformMakeRotation(CGFloat(M_PI * 2.5));
+            })
             
             if selectedSections.count > 0 {
                 //self.tblCategory.reloadSections(NSIndexSet(index: selectedSections!), withRowAnimation: UITableViewRowAnimation.None)

@@ -1,60 +1,54 @@
 PODS:
   - APNGKit (0.2.2)
-  - Firebase (3.11.0):
-    - Firebase/Core (= 3.11.0)
-  - Firebase/Analytics (3.11.0):
+  - Firebase (3.7.0):
+    - Firebase/Core (= 3.7.0)
+  - Firebase/Analytics (3.7.0):
     - Firebase/Core
-  - Firebase/Auth (3.11.0):
+  - Firebase/Auth (3.7.0):
     - Firebase/Core
-    - FirebaseAuth (= 3.1.0)
-  - Firebase/Core (3.11.0):
-    - FirebaseAnalytics (= 3.6.0)
-    - FirebaseCore (= 3.4.6)
-  - Firebase/Database (3.11.0):
+    - FirebaseAuth (= 3.0.5)
+  - Firebase/Core (3.7.0):
+    - FirebaseAnalytics (= 3.4.3)
+    - FirebaseCore (= 3.4.3)
+  - Firebase/Database (3.7.0):
     - Firebase/Core
-    - FirebaseDatabase (= 3.1.1)
-  - Firebase/Storage (3.11.0):
+    - FirebaseDatabase (= 3.0.3)
+  - Firebase/Storage (3.7.0):
     - Firebase/Core
-    - FirebaseStorage (= 1.0.5)
-  - FirebaseAnalytics (3.6.0):
+    - FirebaseStorage (= 1.0.3)
+  - FirebaseAnalytics (3.4.3):
     - FirebaseCore (~> 3.4)
     - FirebaseInstanceID (~> 1.0)
     - GoogleInterchangeUtilities (~> 1.2)
     - GoogleSymbolUtilities (~> 1.1)
-    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
-  - FirebaseAuth (3.1.0):
-    - FirebaseAnalytics (~> 3.6)
-    - GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)
-    - GTMSessionFetcher/Core (~> 1.1)
-  - FirebaseCore (3.4.6):
+    - GoogleUtilities (~> 1.3)
+  - FirebaseAuth (3.0.5):
+    - FirebaseAnalytics (~> 3.3)
+    - GoogleNetworkingUtilities (~> 1.2)
+    - GoogleUtilities (~> 1.2)
+  - FirebaseCore (3.4.3):
     - GoogleInterchangeUtilities (~> 1.2)
-    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
-  - FirebaseDatabase (3.1.1):
-    - FirebaseAnalytics (~> 3.5)
+    - GoogleUtilities (~> 1.2)
+  - FirebaseDatabase (3.0.3):
+    - FirebaseAnalytics (~> 3.3)
   - FirebaseInstanceID (1.0.8)
-  - FirebaseStorage (1.0.5):
-    - FirebaseAnalytics (~> 3.5)
-    - GTMSessionFetcher/Core (~> 1.1)
+  - FirebaseStorage (1.0.3):
+    - FirebaseAnalytics (~> 3.3)
+    - GoogleNetworkingUtilities (~> 1.2)
   - GoogleInterchangeUtilities (1.2.2):
     - GoogleSymbolUtilities (~> 1.1)
+  - GoogleNetworkingUtilities (1.2.2):
+    - GoogleSymbolUtilities (~> 1.1)
   - GoogleSymbolUtilities (1.1.2)
-  - GoogleToolboxForMac/DebugUtils (2.1.0):
-    - GoogleToolboxForMac/Defines (= 2.1.0)
-  - GoogleToolboxForMac/Defines (2.1.0)
-  - GoogleToolboxForMac/NSData+zlib (2.1.0):
-    - GoogleToolboxForMac/Defines (= 2.1.0)
-  - GoogleToolboxForMac/NSDictionary+URLArguments (2.1.0):
-    - GoogleToolboxForMac/DebugUtils (= 2.1.0)
-    - GoogleToolboxForMac/Defines (= 2.1.0)
-    - GoogleToolboxForMac/NSString+URLArguments (= 2.1.0)
-  - GoogleToolboxForMac/NSString+URLArguments (2.1.0)
-  - GTMSessionFetcher/Core (1.1.7)
+  - GoogleUtilities (1.3.2):
+    - GoogleSymbolUtilities (~> 1.1)
+  - HCSStarRatingView (1.4.5)
   - IQKeyboardManagerSwift (4.0.5)
   - JSSAlertView (1.1.5)
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
-  - SVProgressHUD (2.1.2)
+  - SVProgressHUD (2.0.3)
   - SWRevealViewController (2.3.0)
   - UIActivityIndicator-for-SDWebImage (1.2):
     - SDWebImage (~> 3.7)
@@ -66,6 +60,7 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Database
   - Firebase/Storage
+  - HCSStarRatingView (~> 1.4.5)
   - IQKeyboardManagerSwift (= 4.0.5)
   - JSSAlertView (~> 1.1.5)
   - SDWebImage (~> 3.8)
@@ -75,24 +70,25 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   APNGKit: 5f303adb064fe2ff9642a434b7344f2476d60d2c
-  Firebase: b8134e285eb33201115bc688bc5d7f112923bc1f
-  FirebaseAnalytics: 9c67af0ebeb8d2146c9b4ea2616439affa947b58
-  FirebaseAuth: b436e4ecebe068bf8e8c6e4e29de5756ffe7ee24
-  FirebaseCore: 03da1cb32615569bbc2830a22f9ad753d9a02ef5
-  FirebaseDatabase: 6de92187481ff0e8e124064f21742e95ee883b02
+  Firebase: 3875e140d77c7572c6d4852faf94144ffcdb0704
+  FirebaseAnalytics: 02d0aed8c6246a9c8683ac3e9825c67ceb657bde
+  FirebaseAuth: 75a062bbf2d3c97d1e6e55bbc110e13a6853e25d
+  FirebaseCore: 5a885548bbc5f0c410b04f8e9ac9d73ff1221907
+  FirebaseDatabase: 750a4a0fe18ef114318876fd654b2d9c671e0992
   FirebaseInstanceID: ba1e640935235e5fac39dfa816fe7660e72e1a8a
-  FirebaseStorage: 5738284835edb57f0e81d4ae5832bb17c1e4b5fa
+  FirebaseStorage: 3992817bf405f5c1a4f8349678d22724cd0ef509
   GoogleInterchangeUtilities: d5bc4d88d5b661ab72f9d70c58d02ca8c27ad1f7
+  GoogleNetworkingUtilities: 3edd3a8161347494f2da60ea0deddc8a472d94cb
   GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
-  GoogleToolboxForMac: 2b2596cbb7186865e98cadf2b1e262d851c2b168
-  GTMSessionFetcher: a1f8ed39e4fe21c68957daed472c7afbcdf29166
+  GoogleUtilities: 8bbc733218aad26306f9d4a253823986110e3358
+  HCSStarRatingView: bff3f89314d3b5013ce826ea11897d3129ff6b8c
   IQKeyboardManagerSwift: 41fd3a45a2cdb2a0e031af697708a95b865068a1
   JSSAlertView: 1ff5d4dcb28b00a38c0293c4c555231c02590be1
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
-  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
   SWRevealViewController: 6d3fd97f70112fd7cef9de14df4260eacce4c63a
   UIActivityIndicator-for-SDWebImage: 7bf7ebbf0ed1747dedc0d6e949c4603a6d0f9e0c
 
-PODFILE CHECKSUM: 7b599587c1ca3a3918ee8896edb7a0bdb661dc06
+PODFILE CHECKSUM: 2cd1fd078781844176e6dd6f96d90c7bc46c6b66
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.0.1

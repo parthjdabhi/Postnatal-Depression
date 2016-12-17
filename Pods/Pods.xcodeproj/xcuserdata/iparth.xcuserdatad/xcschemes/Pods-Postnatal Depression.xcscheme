@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0730"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "16CBC51052945523699080AF7E6DAD32"
+               BlueprintIdentifier = "2E4B8608160D9BB8F6AAAB97D5BF410D"
                BuildableName = "Pods_Postnatal_Depression.framework"
                BlueprintName = "Pods-Postnatal Depression"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "16CBC51052945523699080AF7E6DAD32"
+            BlueprintIdentifier = "2E4B8608160D9BB8F6AAAB97D5BF410D"
             BuildableName = "Pods_Postnatal_Depression.framework"
             BlueprintName = "Pods-Postnatal Depression"
             ReferencedContainer = "container:Pods.xcodeproj">
@@ -60,15 +60,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "16CBC51052945523699080AF7E6DAD32"
-            BuildableName = "Pods_Postnatal_Depression.framework"
-            BlueprintName = "Pods-Postnatal Depression"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
