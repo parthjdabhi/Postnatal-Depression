@@ -247,42 +247,89 @@
                                     <constraint firstAttribute="width" secondItem="P5R-qI-pWq" secondAttribute="height" multiplier="383:667" id="tAL-B4-W6a"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SHs-c9-UBB">
-                                <rect key="frame" x="45" y="39" width="286" height="564"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LCy-e0-WoB">
+                                <rect key="frame" x="24" y="60" width="327" height="567"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="SHs-c9-UBB">
+                                        <rect key="frame" x="20" y="8" width="287" height="393"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <mutableString key="text">LICENCING AGREEMENT  Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.  DISCLAIMER : Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</mutableString>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JN7-GQ-lG5">
+                                        <rect key="frame" x="47" y="509" width="232" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="GY9-Hd-FHi"/>
+                                            <constraint firstAttribute="width" secondItem="JN7-GQ-lG5" secondAttribute="height" multiplier="116:21" id="tTZ-BW-CBH"/>
+                                        </constraints>
+                                        <state key="normal" image="ContinueButton.png"/>
+                                        <connections>
+                                            <action selector="continueButton:" destination="26a-DW-d5c" eventType="touchUpInside" id="2H8-dY-FNN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vs3-hF-04M">
+                                        <rect key="frame" x="48" y="460" width="232" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="I agree to the terms" image="ic_uncheck">
+                                            <color key="titleColor" red="0.43921568630000002" green="0.42745098040000001" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onCheckboxTapped:" destination="26a-DW-d5c" eventType="touchUpInside" id="iCr-aY-WYh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CuN-h1-Uua">
+                                        <rect key="frame" x="48" y="422" width="232" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="232" id="AXW-ne-1sY"/>
+                                            <constraint firstAttribute="height" constant="30" id="JVZ-re-Tj5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="I am over 18 years old" image="ic_uncheck">
+                                            <color key="titleColor" red="0.4392156862745098" green="0.42745098039215684" blue="0.78823529411764703" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onCheckboxTapped:" destination="26a-DW-d5c" eventType="touchUpInside" id="0fL-DU-S4u"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="SHs-c9-UBB" secondAttribute="height" multiplier="143:282" id="8kB-kb-uEn"/>
+                                    <constraint firstItem="vs3-hF-04M" firstAttribute="width" secondItem="CuN-h1-Uua" secondAttribute="width" id="2Nv-Nh-I5G"/>
+                                    <constraint firstItem="vs3-hF-04M" firstAttribute="centerX" secondItem="CuN-h1-Uua" secondAttribute="centerX" id="DUQ-YS-QPq"/>
+                                    <constraint firstItem="JN7-GQ-lG5" firstAttribute="top" secondItem="vs3-hF-04M" secondAttribute="bottom" constant="19" id="Djb-19-uV0"/>
+                                    <constraint firstItem="vs3-hF-04M" firstAttribute="height" secondItem="CuN-h1-Uua" secondAttribute="height" id="Kd6-QO-PIh"/>
+                                    <constraint firstItem="JN7-GQ-lG5" firstAttribute="centerX" secondItem="LCy-e0-WoB" secondAttribute="centerX" id="MA6-66-Pfi"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="JN7-GQ-lG5" secondAttribute="bottom" constant="8" id="Otp-FK-VlL"/>
+                                    <constraint firstItem="SHs-c9-UBB" firstAttribute="top" secondItem="LCy-e0-WoB" secondAttribute="top" constant="8" id="XTy-Bh-7IC"/>
+                                    <constraint firstItem="CuN-h1-Uua" firstAttribute="centerX" secondItem="SHs-c9-UBB" secondAttribute="centerX" id="mKi-ql-jbN"/>
+                                    <constraint firstAttribute="trailing" secondItem="SHs-c9-UBB" secondAttribute="trailing" constant="20" id="mQ9-pb-O7D"/>
+                                    <constraint firstItem="vs3-hF-04M" firstAttribute="top" secondItem="CuN-h1-Uua" secondAttribute="bottom" constant="8" id="mVG-QS-lEo"/>
+                                    <constraint firstItem="CuN-h1-Uua" firstAttribute="top" secondItem="SHs-c9-UBB" secondAttribute="bottom" constant="21" id="o6s-BV-joY"/>
+                                    <constraint firstItem="SHs-c9-UBB" firstAttribute="leading" secondItem="LCy-e0-WoB" secondAttribute="leading" constant="20" id="onM-DU-Xlj"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JN7-GQ-lG5">
-                                <rect key="frame" x="72" y="536" width="232" height="42"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="JN7-GQ-lG5" secondAttribute="height" multiplier="116:21" id="tTZ-BW-CBH"/>
-                                </constraints>
-                                <state key="normal" image="ContinueButton.png"/>
-                                <connections>
-                                    <action selector="continueButton:" destination="26a-DW-d5c" eventType="touchUpInside" id="2H8-dY-FNN"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="SHs-c9-UBB" firstAttribute="centerX" secondItem="ibC-gH-AUg" secondAttribute="centerX" id="39h-1U-yDZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="P5R-qI-pWq" secondAttribute="trailing" constant="-20" id="B4G-t9-mzF"/>
-                            <constraint firstItem="JN7-GQ-lG5" firstAttribute="centerX" secondItem="ibC-gH-AUg" secondAttribute="centerX" id="FEE-ns-igh"/>
-                            <constraint firstItem="JN7-GQ-lG5" firstAttribute="width" secondItem="SHs-c9-UBB" secondAttribute="height" multiplier="58:141" id="IWA-Ux-m9T"/>
-                            <constraint firstItem="SHs-c9-UBB" firstAttribute="width" secondItem="P5R-qI-pWq" secondAttribute="height" multiplier="286:667" id="JAj-3U-86u"/>
-                            <constraint firstItem="SHs-c9-UBB" firstAttribute="top" secondItem="0VQ-Ns-4Na" secondAttribute="bottom" constant="19" id="PHW-gB-wBy"/>
+                            <constraint firstItem="LCy-e0-WoB" firstAttribute="top" secondItem="0VQ-Ns-4Na" secondAttribute="bottom" constant="40" id="Enh-F7-FXv"/>
+                            <constraint firstAttribute="trailing" secondItem="LCy-e0-WoB" secondAttribute="trailing" constant="24" id="PTg-jj-F3n"/>
+                            <constraint firstItem="WpZ-Jm-485" firstAttribute="top" secondItem="LCy-e0-WoB" secondAttribute="bottom" constant="40" id="T13-Pv-S64"/>
+                            <constraint firstItem="LCy-e0-WoB" firstAttribute="leading" secondItem="ibC-gH-AUg" secondAttribute="leading" constant="24" id="bEN-4Y-tge"/>
                             <constraint firstItem="WpZ-Jm-485" firstAttribute="top" secondItem="P5R-qI-pWq" secondAttribute="bottom" id="iLe-7P-6M6"/>
                             <constraint firstItem="P5R-qI-pWq" firstAttribute="leading" secondItem="ibC-gH-AUg" secondAttribute="leadingMargin" constant="-20" id="iWm-Re-BGb"/>
                             <constraint firstItem="P5R-qI-pWq" firstAttribute="top" secondItem="ibC-gH-AUg" secondAttribute="topMargin" id="u5D-gk-igV"/>
-                            <constraint firstItem="JN7-GQ-lG5" firstAttribute="top" secondItem="SHs-c9-UBB" secondAttribute="bottom" constant="-67" id="xut-1Y-iDm"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yke-QM-h2A"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="btn18Years" destination="CuN-h1-Uua" id="SG5-eZ-Y2N"/>
+                        <outlet property="btnAgreeTerms" destination="vs3-hF-04M" id="1t8-hh-M7j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mxp-Sm-6jI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2350,6 +2397,66 @@ cope at all</string>
             </objects>
             <point key="canvasLocation" x="1913.5" y="1085.5"/>
         </scene>
+        <!--Activity LandingVC-->
+        <scene sceneID="yDp-SW-shJ">
+            <objects>
+                <viewController storyboardIdentifier="ActivityLandingVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oOY-sH-sjY" customClass="ActivityLandingVC" customModule="Postnatal_Depression" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="byn-AE-h4P"/>
+                        <viewControllerLayoutGuide type="bottom" id="0SL-LL-UVf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zol-5R-Uwo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ReminderCopy.png" translatesAutoresizingMaskIntoConstraints="NO" id="ccC-ep-RR7">
+                                <rect key="frame" x="-4" y="0.0" width="383" height="667"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ccC-ep-RR7" secondAttribute="height" multiplier="383:667" id="nfv-TR-vRf"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kNQ-jY-Fny">
+                                <rect key="frame" x="20" y="426" width="335" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="kNQ-jY-Fny" secondAttribute="height" multiplier="335:52" id="dWn-PK-D6J"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                <state key="normal" title="Activity list" backgroundImage="NextButton.png"/>
+                                <connections>
+                                    <action selector="nextButton:" destination="oOY-sH-sjY" eventType="touchUpInside" id="OjT-yg-cbK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AyW-tA-twZ">
+                                <rect key="frame" x="20" y="503" width="335" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="AyW-tA-twZ" secondAttribute="height" multiplier="335:52" id="RBz-mF-44B"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                <state key="normal" title="Shedule an activity" backgroundImage="NextButton.png"/>
+                                <connections>
+                                    <action selector="nextButton:" destination="oOY-sH-sjY" eventType="touchUpInside" id="yFA-RZ-HlE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AyW-tA-twZ" firstAttribute="width" secondItem="AyW-tA-twZ" secondAttribute="height" multiplier="335:52" id="30e-Yg-8Gn"/>
+                            <constraint firstItem="ccC-ep-RR7" firstAttribute="leading" secondItem="Zol-5R-Uwo" secondAttribute="leadingMargin" constant="-20" id="4MZ-zw-aAs"/>
+                            <constraint firstItem="AyW-tA-twZ" firstAttribute="top" secondItem="kNQ-jY-Fny" secondAttribute="bottom" constant="25" id="DrC-uZ-TkK"/>
+                            <constraint firstItem="kNQ-jY-Fny" firstAttribute="width" secondItem="ccC-ep-RR7" secondAttribute="height" multiplier="335:667" id="DuK-41-v9A"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ccC-ep-RR7" secondAttribute="trailing" constant="-20" id="HSt-hb-iu8"/>
+                            <constraint firstItem="AyW-tA-twZ" firstAttribute="top" secondItem="ccC-ep-RR7" secondAttribute="bottom" constant="-164" id="QhT-nm-PYN"/>
+                            <constraint firstItem="0SL-LL-UVf" firstAttribute="top" secondItem="ccC-ep-RR7" secondAttribute="bottom" id="bVd-3h-gmw"/>
+                            <constraint firstItem="ccC-ep-RR7" firstAttribute="top" secondItem="Zol-5R-Uwo" secondAttribute="topMargin" id="gXB-rv-3jq"/>
+                            <constraint firstItem="kNQ-jY-Fny" firstAttribute="centerX" secondItem="Zol-5R-Uwo" secondAttribute="centerX" id="wnp-HC-7eU"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M2M-6R-WZF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1019.5" y="2047.5"/>
+        </scene>
     </scenes>
     <resources>
         <image name="BackButton.png" width="25" height="44"/>
@@ -2364,6 +2471,7 @@ cope at all</string>
         <image name="Reminder1.png" width="750" height="1334"/>
         <image name="Reminder2.png" width="750" height="1334"/>
         <image name="ReminderCopy.png" width="750" height="1334"/>
+        <image name="ic_uncheck" width="30" height="30"/>
         <image name="right-arrow" width="42" height="42"/>
     </resources>
 </document>

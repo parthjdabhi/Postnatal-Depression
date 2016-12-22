@@ -19,6 +19,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UIApplication.sharedApplication().statusBarStyle = .LightContent
         
+        if let isEligibleToUseOurApp = NSUserDefaults.standardUserDefaults().objectForKey("isEligibleToUseOurApp") as? String
+            where isEligibleToUseOurApp == "11"
+        {
+            print("User is Eligible To Use Our App")
+            
+            let landingVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("LandingViewController") as! LandingViewController
+            let nav = UINavigationController(rootViewController: landingVC)
+            nav.navigationBarHidden = true
+            self.window?.rootViewController = nav
+            self.window?.makeKeyAndVisible()
+        }
+        
+        
         return true
     }
 

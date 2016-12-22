@@ -74,7 +74,7 @@ class MainCategoryVC: UIViewController, UITableViewDelegate, UITableViewDataSour
             //Main Category
             let cell:CategoryTableViewCell = self.tblCategory.dequeueReusableCellWithIdentifier("CategoryTableViewCell") as! CategoryTableViewCell
             
-            cell.lblCategoryTitle?.text = "Category \(indexPath.section+1) \(indexPath.row+1)"
+            cell.lblCategoryTitle?.text = categories[indexPath.section]
             
             cell.imgCategory.backgroundColor = UIColor.grayColor()
             cell.imgCategory.layer.cornerRadius = (cell.imgCategory.frame.width/2)

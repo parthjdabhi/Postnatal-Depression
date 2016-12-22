@@ -30,6 +30,8 @@ public class JSSAlertView: UIViewController {
 	var isAlertOpen:Bool = false
 	var noButtons: Bool = false
 	
+    var buttonAction:(()->Void)?
+    
 	enum FontType {
 		case Title, Text, Button
 	}
@@ -240,26 +242,31 @@ public class JSSAlertView: UIViewController {
 	
 	
 	
-	public func info(viewController: UIViewController, title: String, text: String?=nil, buttonText: String?=nil, cancelButtonText: String?=nil, delay: Double?=nil) -> JSSAlertViewResponder {
+	public func info(viewController: UIViewController, title: String, text: String?=nil, buttonText: String?=nil, buttonAction:(()->Void)?=nil, cancelButtonText: String?=nil, delay: Double?=nil) -> JSSAlertViewResponder {
+        self.buttonAction = buttonAction
 		let alertview = self.show(viewController, title: title, text: text, buttonText: buttonText, cancelButtonText: cancelButtonText, color: UIColorFromHex(0x3498db, alpha: 1), delay: delay)
 		alertview.setTextTheme(.Light)
 		return alertview
 	}
 	
-	public func success(viewController: UIViewController, title: String, text: String?=nil, buttonText: String?=nil, cancelButtonText: String?=nil, delay: Double?=nil) -> JSSAlertViewResponder {
+	public func success(viewController: UIViewController, title: String, text: String?=nil, buttonText: String?=nil, buttonAction:(()->Void)?=nil, cancelButtonText: String?=nil, delay: Double?=nil) -> JSSAlertViewResponder {
+        self.buttonAction = buttonAction
 		return self.show(viewController, title: title, text: text, buttonText: buttonText, cancelButtonText: cancelButtonText, color: UIColorFromHex(0x2ecc71, alpha: 1), delay: delay)
 	}
 	
-	public func warning(viewController: UIViewController, title: String, text: String?=nil, buttonText: String?=nil, cancelButtonText: String?=nil, delay: Double?=nil) -> JSSAlertViewResponder {
+	public func warning(viewController: UIViewController, title: String, text: String?=nil, buttonText: String?=nil, buttonAction:(()->Void)?=nil, cancelButtonText: String?=nil, delay: Double?=nil) -> JSSAlertViewResponder {
+        self.buttonAction = buttonAction
 		return self.show(viewController, title: title, text: text, buttonText: buttonText, cancelButtonText: cancelButtonText, color: UIColorFromHex(0xf1c40f, alpha: 1), delay: delay)
 	}
 	
-	public func danger(viewController: UIViewController, title: String, text: String?=nil, buttonText: String?=nil, cancelButtonText: String?=nil, delay: Double?=nil) -> JSSAlertViewResponder {
+	public func danger(viewController: UIViewController, title: String, text: String?=nil, buttonText: String?=nil, buttonAction:(()->Void)?=nil, cancelButtonText: String?=nil, delay: Double?=nil) -> JSSAlertViewResponder {
+        self.buttonAction = buttonAction
 		let alertview = self.show(viewController, title: title, text: text, buttonText: buttonText, cancelButtonText: cancelButtonText, color: UIColorFromHex(0xe74c3c, alpha: 1), delay: delay)
 		alertview.setTextTheme(.Light)
 		return alertview
 	}
 	
+    
 	public func show(viewController: UIViewController, title: String, text: String?=nil, noButtons: Bool?=false, buttonText: String?=nil, cancelButtonText: String?=nil, color: UIColor?=nil, iconImage: UIImage?=nil, delay: Double?=nil) -> JSSAlertViewResponder {
 		self.rootViewController = viewController
 				
@@ -397,6 +404,7 @@ public class JSSAlertView: UIViewController {
 	}
 	
 	func buttonTap() {
+        self.buttonAction?()
 		closeView(true, source: .Close);
 	}
 	
