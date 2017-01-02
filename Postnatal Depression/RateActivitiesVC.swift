@@ -44,6 +44,15 @@ class RateActivitiesVC: UIViewController {
         self.navigationController!.popViewControllerAnimated(true)
     }
     
+    @IBAction func actionNextButton(sender: AnyObject) {
+        //self.navigationController!.popViewControllerAnimated(true)
+        
+        //For test Going to How likely to accomplish screen
+        let vc = self.storyboard?.instantiateViewControllerWithIdentifier("HowAccomplishVC") as? HowAccomplishVC
+        self.navigationController?.pushViewController(vc!, animated: true)
+        
+    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return categories.count
         //return 15

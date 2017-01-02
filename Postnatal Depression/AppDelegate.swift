@@ -8,6 +8,9 @@
 
 import UIKit
 import CoreData
+import IQKeyboardManagerSwift
+import JSSAlertView
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,7 +20,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
+        IQKeyboardManager.sharedManager().enable = true
+
         UIApplication.sharedApplication().statusBarStyle = .LightContent
+        
+        
+        //Local Notification
+        let notificationSettings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil)
+        UIApplication.sharedApplication().registerUserNotificationSettings(notificationSettings)
+        
+        
+        if let options = launchOptions {
+            let value = options[UIApplicationLaunchOptionsLocalNotificationKey] as? UILocalNotification
+            if let notification = value {
+                self.application(application, didReceiveLocalNotification: notification)
+            }
+        }
+        
         
         if let isEligibleToUseOurApp = NSUserDefaults.standardUserDefaults().objectForKey("isEligibleToUseOurApp") as? String
             where isEligibleToUseOurApp == "11"
@@ -58,6 +77,58 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
     }
+    
+    
+    func application(application: UIApplication, didRegisterUserNotificationSettings notificationSettings: UIUserNotificationSettings) {
+        
+        print("notificationSettings.types.rawValue : \(notificationSettings.types.rawValue)")
+        
+    }
+    
+    func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
+        // Do something serious in a real app.
+        print("Received Local Notification:")
+        print(notification.alertBody)
+        print(notification.userInfo)
+        
+        if let alertType = notification.userInfo?["RemiderType"] as? String where alertType == "EndActivity" {
+            let alertNotification = UIAlertView()
+            alertNotification.title = notification.alertAction!
+            alertNotification.show()
+        } else {
+            
+//            JSSAlertView().info(UIApplication.topViewController(), title: "Notification", text: notification.alertBody, buttonText: "Call", buttonAction: {
+//                print("Call..")
+//                }, cancelButtonText: "Okay", delay: nil)
+            
+            let alertNotification = UIAlertView()
+            alertNotification.title = notification.alertAction!
+            alertNotification.show()
+        }
+        
+        if ( application.applicationState == .Active )
+        {
+            //opened from a notification when the app was on background
+            
+        } else {
+            //App opened from Notification
+        }
+    }
+    
+    func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forLocalNotification notification: UILocalNotification, completionHandler: () -> Void) {
+        
+        if identifier == "StartActivity" {
+            //NSNotificationCenter.defaultCenter().postNotificationName("startActivityNotification", object: nil)
+        }
+        else if identifier == "EndActivity" {
+            //NSNotificationCenter.defaultCenter().postNotificationName("endActivityNotification", object: nil)
+        }
+        
+        completionHandler()
+    }
+    
+    
+    
 
     // MARK: - Core Data stack
 

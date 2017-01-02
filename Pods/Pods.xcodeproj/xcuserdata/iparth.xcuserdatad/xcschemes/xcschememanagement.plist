@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>IQDropDownTextField.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>IQKeyboardManagerSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -62,12 +67,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2E4B8608160D9BB8F6AAAB97D5BF410D</key>
+		<key>2CA54F77D9DB6C9C985D64461AF5AEEC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>520C57B09A1F389645B2F5D147F0849B</key>
+		<key>3511258FF1DED3401C4B456024D5FA41</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -77,7 +82,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8E3AAEA4141C66F8E7242A83A081B876</key>
+		<key>790725D977001D9EA000CD263F8EC6CA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8D027A259A79FA70D5572F3624F0E61E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -87,12 +97,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AA5F47347F788A0A9F0D0D0371A9E51A</key>
+		<key>B63F970EA1D3F9B2814FF0726BC21C23</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C54BE1BAF746E5590F760E293F091425</key>
+		<key>BF0D478055926616CCBC14CA274F80C0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
