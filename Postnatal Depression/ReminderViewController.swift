@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ReminderCopyViewController: UIViewController {
+class ReminderViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

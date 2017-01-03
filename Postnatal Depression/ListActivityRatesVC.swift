@@ -1,56 +1,56 @@
 //
-//  RateActivitiesVC.swift
+//  ListActivityRatesVC.swift
 //  Postnatal Depression
 //
-//  Created by iParth on 12/17/16.
-//  Copyright © 2016 Harloch. All rights reserved.
+//  Created by iParth on 1/3/17.
+//  Copyright © 2017 Harloch. All rights reserved.
 //
 
 import UIKit
 
-class RateActivitiesVC: UIViewController {
-
+class ListActivityRatesVC: UIViewController {
+    
     @IBOutlet weak var tblRates: UITableView!
-    @IBOutlet weak var btnNext: UIButton!
+    @IBOutlet weak var btnSheduleAnActivity: UIButton!
     
     var categories:Array<String> = ["Nap","Watch a movie","Read a book","Make a good meal"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
-        btnNext.layer.cornerRadius = (btnNext.frame.height/2)
-        btnNext.layer.masksToBounds = true
+        btnSheduleAnActivity.layer.cornerRadius = (btnSheduleAnActivity.frame.height/2)
+        btnSheduleAnActivity.layer.masksToBounds = true
         
         tblRates.scrollEnabled = false
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
     
     @IBAction func actionBackButton(sender: AnyObject) {
         self.navigationController!.popViewControllerAnimated(true)
     }
     
-    @IBAction func actionNextButton(sender: AnyObject) {
+    @IBAction func actionSheduleAnActivityButton(sender: AnyObject) {
         //self.navigationController!.popViewControllerAnimated(true)
         
         //For test Going to How likely to accomplish screen
-        let vc = self.storyboard?.instantiateViewControllerWithIdentifier("ListActivityRatesVC") as? ListActivityRatesVC
+        let vc = self.storyboard?.instantiateViewControllerWithIdentifier("HowAccomplishVC") as? HowAccomplishVC
         self.navigationController?.pushViewController(vc!, animated: true)
         
     }
@@ -63,11 +63,11 @@ class RateActivitiesVC: UIViewController {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         //Main Category
-        let cell:RateTableViewCell = self.tblRates.dequeueReusableCellWithIdentifier("RateTableViewCell") as! RateTableViewCell
+        let cell:RateListTableViewCell = self.tblRates.dequeueReusableCellWithIdentifier("RateListTableViewCell") as! RateListTableViewCell
         
         cell.lblCategoryTitle?.text = categories[indexPath.row]
         cell.vRate?.tintColor = UIColor(red: 241/255.0, green: 196/255.0, blue: 15/255.0, alpha: 1)
-        cell.vRate?.value = 4
+        cell.vRate?.value = 3
         
         return cell
     }

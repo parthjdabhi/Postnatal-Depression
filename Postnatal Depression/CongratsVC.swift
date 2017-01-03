@@ -49,8 +49,8 @@ class CongratsVC: UIViewController {
         //"checkin to shedule another activities"
         
         let notification = UILocalNotification()
-        //notification.fireDate = NSDate(timeIntervalSinceNow: 10)
-        notification.fireDate = startDate
+        notification.fireDate = NSDate(timeIntervalSinceNow: 10)
+        //notification.fireDate = startDate
         notification.alertBody = "it's almost time for some self care"
         notification.alertAction = "StartActivity"
         notification.soundName = UILocalNotificationDefaultSoundName
@@ -58,8 +58,8 @@ class CongratsVC: UIViewController {
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
         
         let endANotification = UILocalNotification()
-        //endANotification.fireDate = NSDate(timeIntervalSinceNow: 20)
-        endANotification.fireDate = endDate
+        endANotification.fireDate = NSDate(timeIntervalSinceNow: 20)
+        //endANotification.fireDate = endDate
         endANotification.alertBody = "checkin to shedule another activities"
         endANotification.alertAction = "EndActivity"
         endANotification.soundName = UILocalNotificationDefaultSoundName
@@ -76,6 +76,8 @@ class CongratsVC: UIViewController {
             return
         }
         
+        let next = self.storyboard?.instantiateViewControllerWithIdentifier("ScoreQuestion2ViewController") as! ScoreQuestion2ViewController!
+        self.navigationController?.pushViewController(next, animated: true)
     }
 
 }

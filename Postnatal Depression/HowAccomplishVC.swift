@@ -47,6 +47,15 @@ class HowAccomplishVC: UIViewController {
         self.navigationController!.popViewControllerAnimated(true)
     }
     
+    @IBAction func actionUnlikely(sender: AnyObject) {
+        //For test Going to How likely to accomplish screen
+        let vc = self.storyboard?.instantiateViewControllerWithIdentifier("AccomplishUnlikelyVC") as? AccomplishUnlikelyVC
+        self.navigationController?.pushViewController(vc!, animated: true)
+    }
+    
+    @IBAction func actionSomeWhatLikely(sender: AnyObject) {
+    }
+    
     @IBAction func actionEasyiHaveGotThis(sender: AnyObject) {
         //self.navigationController!.popViewControllerAnimated(true)
         

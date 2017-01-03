@@ -17,6 +17,9 @@
 		5E6CD5BF1E02B50D00730CD0 /* MainCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6CD5BE1E02B50D00730CD0 /* MainCategoryVC.swift */; };
 		5E6CD5C11E02BF2100730CD0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E6CD5C01E02BF2100730CD0 /* Images.xcassets */; };
 		5E6CD5C41E02C11400730CD0 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6CD5C31E02C11400730CD0 /* CategoryTableViewCell.swift */; };
+		5E84FC5A1E1BE00000AFF73B /* ListActivityRatesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E84FC591E1BE00000AFF73B /* ListActivityRatesVC.swift */; };
+		5E84FC5C1E1BE23D00AFF73B /* RateListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E84FC5B1E1BE23D00AFF73B /* RateListTableViewCell.swift */; };
+		5E84FC5F1E1BEA2000AFF73B /* AccomplishUnlikelyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E84FC5E1E1BEA2000AFF73B /* AccomplishUnlikelyVC.swift */; };
 		5ED480671E1A5F8600C3FE15 /* HowAccomplishVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED480661E1A5F8600C3FE15 /* HowAccomplishVC.swift */; };
 		5ED480691E1A5FAB00C3FE15 /* SelectAStartTimeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED480681E1A5FAB00C3FE15 /* SelectAStartTimeVC.swift */; };
 		5ED4806B1E1A5FC000C3FE15 /* SelectAEndTimeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED4806A1E1A5FC000C3FE15 /* SelectAEndTimeVC.swift */; };
@@ -40,7 +43,7 @@
 		DA7C7A571E00EAB300F2DC7C /* Reminder2.png in Resources */ = {isa = PBXBuildFile; fileRef = DA7C7A551E00EAB300F2DC7C /* Reminder2.png */; };
 		DA7C7A591E00EBF300F2DC7C /* GetStarted.png in Resources */ = {isa = PBXBuildFile; fileRef = DA7C7A581E00EBF300F2DC7C /* GetStarted.png */; };
 		DA7C7A5B1E0108E300F2DC7C /* ReminderCopy.png in Resources */ = {isa = PBXBuildFile; fileRef = DA7C7A5A1E0108E300F2DC7C /* ReminderCopy.png */; };
-		DA7C7A5D1E010B0000F2DC7C /* ReminderCopyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7C7A5C1E010B0000F2DC7C /* ReminderCopyViewController.swift */; };
+		DA7C7A5D1E010B0000F2DC7C /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7C7A5C1E010B0000F2DC7C /* ReminderViewController.swift */; };
 		DA7C7A5F1E010C4A00F2DC7C /* ReminderNext.png in Resources */ = {isa = PBXBuildFile; fileRef = DA7C7A5E1E010C4A00F2DC7C /* ReminderNext.png */; };
 		DA7C7A611E010C5B00F2DC7C /* ReminderNextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7C7A601E010C5B00F2DC7C /* ReminderNextViewController.swift */; };
 		DA7C7A651E010CF000F2DC7C /* NextButton.png in Resources */ = {isa = PBXBuildFile; fileRef = DA7C7A641E010CF000F2DC7C /* NextButton.png */; };
@@ -90,6 +93,9 @@
 		5E6CD5BE1E02B50D00730CD0 /* MainCategoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCategoryVC.swift; sourceTree = "<group>"; };
 		5E6CD5C01E02BF2100730CD0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5E6CD5C31E02C11400730CD0 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		5E84FC591E1BE00000AFF73B /* ListActivityRatesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListActivityRatesVC.swift; sourceTree = "<group>"; };
+		5E84FC5B1E1BE23D00AFF73B /* RateListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateListTableViewCell.swift; sourceTree = "<group>"; };
+		5E84FC5E1E1BEA2000AFF73B /* AccomplishUnlikelyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccomplishUnlikelyVC.swift; sourceTree = "<group>"; };
 		5ED480661E1A5F8600C3FE15 /* HowAccomplishVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowAccomplishVC.swift; sourceTree = "<group>"; };
 		5ED480681E1A5FAB00C3FE15 /* SelectAStartTimeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectAStartTimeVC.swift; sourceTree = "<group>"; };
 		5ED4806A1E1A5FC000C3FE15 /* SelectAEndTimeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectAEndTimeVC.swift; sourceTree = "<group>"; };
@@ -121,7 +127,7 @@
 		DA7C7A551E00EAB300F2DC7C /* Reminder2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Reminder2.png; sourceTree = "<group>"; };
 		DA7C7A581E00EBF300F2DC7C /* GetStarted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GetStarted.png; sourceTree = "<group>"; };
 		DA7C7A5A1E0108E300F2DC7C /* ReminderCopy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ReminderCopy.png; sourceTree = "<group>"; };
-		DA7C7A5C1E010B0000F2DC7C /* ReminderCopyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderCopyViewController.swift; sourceTree = "<group>"; };
+		DA7C7A5C1E010B0000F2DC7C /* ReminderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
 		DA7C7A5E1E010C4A00F2DC7C /* ReminderNext.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ReminderNext.png; sourceTree = "<group>"; };
 		DA7C7A601E010C5B00F2DC7C /* ReminderNextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderNextViewController.swift; sourceTree = "<group>"; };
 		DA7C7A641E010CF000F2DC7C /* NextButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NextButton.png; sourceTree = "<group>"; };
@@ -194,6 +200,8 @@
 				5E6CD5C21E02C0D900730CD0 /* Tableview Cell */,
 				5E6CD5BE1E02B50D00730CD0 /* MainCategoryVC.swift */,
 				5E58EC891E05544400AF3ADC /* RateActivitiesVC.swift */,
+				5E84FC591E1BE00000AFF73B /* ListActivityRatesVC.swift */,
+				5E84FC5E1E1BEA2000AFF73B /* AccomplishUnlikelyVC.swift */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -203,6 +211,7 @@
 			children = (
 				5E6CD5C31E02C11400730CD0 /* CategoryTableViewCell.swift */,
 				5E58EC8D1E055BC700AF3ADC /* RateTableViewCell.swift */,
+				5E84FC5B1E1BE23D00AFF73B /* RateListTableViewCell.swift */,
 				5E1BB5011E040D9C005B933F /* NormalCell.xib */,
 				5E1BB5021E040D9C005B933F /* ValuePickerCell.xib */,
 				5E1BB5051E040DA6005B933F /* CustomCell.swift */,
@@ -262,7 +271,7 @@
 				5E6CD5BB1E02B48900730CD0 /* Categories */,
 				DA7C7A821E01199D00F2DC7C /* Scores */,
 				5ED480631E1A5F0B00C3FE15 /* Local Notification - Part3 */,
-				DA7C7A5C1E010B0000F2DC7C /* ReminderCopyViewController.swift */,
+				DA7C7A5C1E010B0000F2DC7C /* ReminderViewController.swift */,
 				DA7C7A601E010C5B00F2DC7C /* ReminderNextViewController.swift */,
 				5E6472751E0BE9DD00FBF049 /* ActivityLandingVC.swift */,
 				DA7C7A1C1E00DBC400F2DC7C /* Main.storyboard */,
@@ -547,6 +556,7 @@
 				5ED4806B1E1A5FC000C3FE15 /* SelectAEndTimeVC.swift in Sources */,
 				DA7C7A811E01199500F2DC7C /* ScoreQuestion10ViewController.swift in Sources */,
 				DA7C7A1B1E00DBC400F2DC7C /* ViewController.swift in Sources */,
+				5E84FC5C1E1BE23D00AFF73B /* RateListTableViewCell.swift in Sources */,
 				DA7C7A791E01196F00F2DC7C /* ScoreQuestion6ViewController.swift in Sources */,
 				DA7C7A7B1E01197400F2DC7C /* ScoreQuestion7ViewController.swift in Sources */,
 				DA7C7A751E01196400F2DC7C /* ScoreQuestion4ViewController.swift in Sources */,
@@ -570,8 +580,10 @@
 				5E6CD5C41E02C11400730CD0 /* CategoryTableViewCell.swift in Sources */,
 				5E58EC8A1E05544400AF3ADC /* RateActivitiesVC.swift in Sources */,
 				5ED480721E1A74D700C3FE15 /* Extensions.swift in Sources */,
+				5E84FC5F1E1BEA2000AFF73B /* AccomplishUnlikelyVC.swift in Sources */,
 				DA7C7A4F1E00EA0900F2DC7C /* LandingViewController.swift in Sources */,
-				DA7C7A5D1E010B0000F2DC7C /* ReminderCopyViewController.swift in Sources */,
+				DA7C7A5D1E010B0000F2DC7C /* ReminderViewController.swift in Sources */,
+				5E84FC5A1E1BE00000AFF73B /* ListActivityRatesVC.swift in Sources */,
 				DA7C7A4A1E00E27300F2DC7C /* ScoreQuestionsViewController.swift in Sources */,
 				DA7C7A891E01265400F2DC7C /* ScoreQuestion11ViewController.swift in Sources */,
 			);

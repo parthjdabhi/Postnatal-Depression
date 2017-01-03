@@ -37,9 +37,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
-        
         if let isEligibleToUseOurApp = NSUserDefaults.standardUserDefaults().objectForKey("isEligibleToUseOurApp") as? String
-            where isEligibleToUseOurApp == "11"
+            where isEligibleToUseOurApp == "1"
         {
             print("User is Eligible To Use Our App")
             
@@ -49,7 +48,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.rootViewController = nav
             self.window?.makeKeyAndVisible()
         }
-        
         
         return true
     }
@@ -91,27 +89,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print(notification.alertBody)
         print(notification.userInfo)
         
-        if let alertType = notification.userInfo?["RemiderType"] as? String where alertType == "EndActivity" {
-            let alertNotification = UIAlertView()
-            alertNotification.title = notification.alertAction!
-            alertNotification.show()
-        } else {
-            
-//            JSSAlertView().info(UIApplication.topViewController(), title: "Notification", text: notification.alertBody, buttonText: "Call", buttonAction: {
-//                print("Call..")
-//                }, cancelButtonText: "Okay", delay: nil)
-            
-            let alertNotification = UIAlertView()
-            alertNotification.title = notification.alertAction!
-            alertNotification.show()
-        }
         
         if ( application.applicationState == .Active )
         {
             //opened from a notification when the app was on background
+            //let alertNotification = UIAlertView(title: "Title", message: notification.alertBody ?? "Title", delegate: nil, cancelButtonTitle: "Okay")
+            //alertNotification.show()
+            
+            JSSAlertView().info(UIApplication.topViewController()!, title: "Notification", text: notification.alertBody, buttonText: "Nailed it", buttonAction: {
+                print("Call..")
+                }, cancelButtonText: "Ididn't get to it", delay: nil)
             
         } else {
             //App opened from Notification
+            if let alertType = notification.userInfo?["RemiderType"] as? String where alertType == "EndActivity" {
+                let alertNotification = UIAlertView()
+                alertNotification.title = notification.alertBody ?? "Title"
+                alertNotification.show()
+            } else {
+                JSSAlertView().info(UIApplication.topViewController()!, title: "Notification", text: notification.alertBody, buttonText: "Nailed it", buttonAction: {
+                    print("Call..")
+                    }, cancelButtonText: "Ididn't get to it", delay: nil)
+            }
         }
     }
     

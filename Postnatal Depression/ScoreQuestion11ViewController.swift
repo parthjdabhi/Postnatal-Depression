@@ -35,11 +35,11 @@ class ScoreQuestion11ViewController: UIViewController {
         totalScore = tenthScore + localResults
         if totalScore < 9 {
             JSSAlertView().info(self, title: "Your Score is \(totalScore)", text: "This indicates that you are not experiencing all the symptoms of depression. If you would like extra help improving your mood, go ahead!", buttonText: "Next Step")
-            let next = self.storyboard?.instantiateViewControllerWithIdentifier("ReminderCopyViewController") as! ReminderCopyViewController!
+            let next = self.storyboard?.instantiateViewControllerWithIdentifier("ReminderViewController") as! ReminderViewController!
             self.navigationController?.pushViewController(next, animated: true)
         } else {
             JSSAlertView().info(self, title: "Your Score is \(totalScore)", text: "This indicates that you are experiencing some symptoms of depression. This app can help you improve your mood.", buttonText: "Next Step")
-            let next = self.storyboard?.instantiateViewControllerWithIdentifier("ReminderCopyViewController") as! ReminderCopyViewController!
+            let next = self.storyboard?.instantiateViewControllerWithIdentifier("ReminderViewController") as! ReminderViewController!
             self.navigationController?.pushViewController(next, animated: true)
         }
     }
@@ -49,11 +49,11 @@ class ScoreQuestion11ViewController: UIViewController {
         totalScore = tenthScore + localResults
         if totalScore < 9 {
             JSSAlertView().info(self, title: "Your Score is \(totalScore)", text: "This indicates that you are not experiencing all the symptoms of depression. If you would like extra help improving your mood, go ahead!", buttonText: "Next Step")
-            let next = self.storyboard?.instantiateViewControllerWithIdentifier("ReminderCopyViewController") as! ReminderCopyViewController!
+            let next = self.storyboard?.instantiateViewControllerWithIdentifier("ReminderViewController") as! ReminderViewController!
             self.navigationController?.pushViewController(next, animated: true)
         } else {
             JSSAlertView().info(self, title: "Your Score is \(totalScore)", text: "This indicates that you are experiencing some symptoms of depression. This app can help you improve your mood.", buttonText: "Next Step")
-            let next = self.storyboard?.instantiateViewControllerWithIdentifier("ReminderCopyViewController") as! ReminderCopyViewController!
+            let next = self.storyboard?.instantiateViewControllerWithIdentifier("ReminderViewController") as! ReminderViewController!
             self.navigationController?.pushViewController(next, animated: true)
         }
     }
@@ -63,11 +63,11 @@ class ScoreQuestion11ViewController: UIViewController {
         totalScore = tenthScore + localResults
         if totalScore < 9 {
             JSSAlertView().info(self, title: "Your Score is \(totalScore)", text: "This indicates that you are not experiencing all the symptoms of depression. If you would like extra help improving your mood, go ahead!", buttonText: "Next Step")
-            let next = self.storyboard?.instantiateViewControllerWithIdentifier("ReminderCopyViewController") as! ReminderCopyViewController!
+            let next = self.storyboard?.instantiateViewControllerWithIdentifier("ReminderViewController") as! ReminderViewController!
             self.navigationController?.pushViewController(next, animated: true)
         } else {
             JSSAlertView().info(self, title: "Your Score is \(totalScore)", text: "This indicates that you are experiencing some symptoms of depression. This app can help you improve your mood.", buttonText: "Next Step")
-            let next = self.storyboard?.instantiateViewControllerWithIdentifier("ReminderCopyViewController") as! ReminderCopyViewController!
+            let next = self.storyboard?.instantiateViewControllerWithIdentifier("ReminderViewController") as! ReminderViewController!
             self.navigationController?.pushViewController(next, animated: true)
         }
     }
@@ -77,11 +77,11 @@ class ScoreQuestion11ViewController: UIViewController {
         totalScore = tenthScore + localResults
         if totalScore < 9 {
             JSSAlertView().info(self, title: "Your Score is \(totalScore)", text: "This indicates that you are not experiencing all the symptoms of depression. If you would like extra help improving your mood, go ahead!", buttonText: "Next Step")
-            let next = self.storyboard?.instantiateViewControllerWithIdentifier("ReminderCopyViewController") as! ReminderCopyViewController!
+            let next = self.storyboard?.instantiateViewControllerWithIdentifier("ReminderViewController") as! ReminderViewController!
             self.navigationController?.pushViewController(next, animated: true)
         } else {
             JSSAlertView().info(self, title: "Your Score is \(totalScore)", text: "This indicates that you are experiencing some symptoms of depression. This app can help you improve your mood.", buttonText: "Next Step")
-            let next = self.storyboard?.instantiateViewControllerWithIdentifier("ReminderCopyViewController") as! ReminderCopyViewController!
+            let next = self.storyboard?.instantiateViewControllerWithIdentifier("ReminderViewController") as! ReminderViewController!
             self.navigationController?.pushViewController(next, animated: true)
         }
     }
