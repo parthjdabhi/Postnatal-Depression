@@ -50,7 +50,7 @@ class CongratsVC: UIViewController {
         
         let notification = UILocalNotification()
         notification.fireDate = NSDate(timeIntervalSinceNow: 10)
-        //notification.fireDate = startDate
+        //notification.fireDate = startDate t
         notification.alertBody = "it's almost time for some self care"
         notification.alertAction = "StartActivity"
         notification.soundName = UILocalNotificationDefaultSoundName

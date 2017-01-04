@@ -20,6 +20,7 @@
 		5E84FC5A1E1BE00000AFF73B /* ListActivityRatesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E84FC591E1BE00000AFF73B /* ListActivityRatesVC.swift */; };
 		5E84FC5C1E1BE23D00AFF73B /* RateListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E84FC5B1E1BE23D00AFF73B /* RateListTableViewCell.swift */; };
 		5E84FC5F1E1BEA2000AFF73B /* AccomplishUnlikelyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E84FC5E1E1BEA2000AFF73B /* AccomplishUnlikelyVC.swift */; };
+		5EAEB4B81E1D173C00766836 /* SomewhatLikelyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAEB4B71E1D173C00766836 /* SomewhatLikelyVC.swift */; };
 		5ED480671E1A5F8600C3FE15 /* HowAccomplishVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED480661E1A5F8600C3FE15 /* HowAccomplishVC.swift */; };
 		5ED480691E1A5FAB00C3FE15 /* SelectAStartTimeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED480681E1A5FAB00C3FE15 /* SelectAStartTimeVC.swift */; };
 		5ED4806B1E1A5FC000C3FE15 /* SelectAEndTimeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED4806A1E1A5FC000C3FE15 /* SelectAEndTimeVC.swift */; };
@@ -96,6 +97,7 @@
 		5E84FC591E1BE00000AFF73B /* ListActivityRatesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListActivityRatesVC.swift; sourceTree = "<group>"; };
 		5E84FC5B1E1BE23D00AFF73B /* RateListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateListTableViewCell.swift; sourceTree = "<group>"; };
 		5E84FC5E1E1BEA2000AFF73B /* AccomplishUnlikelyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccomplishUnlikelyVC.swift; sourceTree = "<group>"; };
+		5EAEB4B71E1D173C00766836 /* SomewhatLikelyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SomewhatLikelyVC.swift; sourceTree = "<group>"; };
 		5ED480661E1A5F8600C3FE15 /* HowAccomplishVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowAccomplishVC.swift; sourceTree = "<group>"; };
 		5ED480681E1A5FAB00C3FE15 /* SelectAStartTimeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectAStartTimeVC.swift; sourceTree = "<group>"; };
 		5ED4806A1E1A5FC000C3FE15 /* SelectAEndTimeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectAEndTimeVC.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				5E58EC891E05544400AF3ADC /* RateActivitiesVC.swift */,
 				5E84FC591E1BE00000AFF73B /* ListActivityRatesVC.swift */,
 				5E84FC5E1E1BEA2000AFF73B /* AccomplishUnlikelyVC.swift */,
+				5EAEB4B71E1D173C00766836 /* SomewhatLikelyVC.swift */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -269,8 +272,8 @@
 				DA7C7A1A1E00DBC400F2DC7C /* ViewController.swift */,
 				DA7C7A851E011F5200F2DC7C /* Initial 4 Screens */,
 				5E6CD5BB1E02B48900730CD0 /* Categories */,
-				DA7C7A821E01199D00F2DC7C /* Scores */,
 				5ED480631E1A5F0B00C3FE15 /* Local Notification - Part3 */,
+				DA7C7A821E01199D00F2DC7C /* Scores */,
 				DA7C7A5C1E010B0000F2DC7C /* ReminderViewController.swift */,
 				DA7C7A601E010C5B00F2DC7C /* ReminderNextViewController.swift */,
 				5E6472751E0BE9DD00FBF049 /* ActivityLandingVC.swift */,
@@ -579,6 +582,7 @@
 				DA7C7A711E01195000F2DC7C /* ScoreQuestion2ViewController.swift in Sources */,
 				5E6CD5C41E02C11400730CD0 /* CategoryTableViewCell.swift in Sources */,
 				5E58EC8A1E05544400AF3ADC /* RateActivitiesVC.swift in Sources */,
+				5EAEB4B81E1D173C00766836 /* SomewhatLikelyVC.swift in Sources */,
 				5ED480721E1A74D700C3FE15 /* Extensions.swift in Sources */,
 				5E84FC5F1E1BEA2000AFF73B /* AccomplishUnlikelyVC.swift in Sources */,
 				DA7C7A4F1E00EA0900F2DC7C /* LandingViewController.swift in Sources */,

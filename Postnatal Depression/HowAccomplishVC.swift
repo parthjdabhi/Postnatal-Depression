@@ -54,6 +54,8 @@ class HowAccomplishVC: UIViewController {
     }
     
     @IBAction func actionSomeWhatLikely(sender: AnyObject) {
+        let vc = self.storyboard?.instantiateViewControllerWithIdentifier("SomewhatLikelyVC") as? SomewhatLikelyVC
+        self.navigationController?.pushViewController(vc!, animated: true)
     }
     
     @IBAction func actionEasyiHaveGotThis(sender: AnyObject) {
