@@ -8,6 +8,8 @@
 
 import UIKit
 import JSSAlertView
+import PopupDialog
+
 
 class LicenseViewController: UIViewController {
 
@@ -20,6 +22,14 @@ class LicenseViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        // Prepare the popup assets
+        let title = "Activity completed?"
+        let message = "This is the message section of the popup dialog default view"
+        let image = UIImage(named: "pexels-photo-103290")
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,6 +51,53 @@ class LicenseViewController: UIViewController {
             sender.tag = 0
             sender.setImage(UIImage(named: "ic_uncheck")!, forState: UIControlState.Normal)
         }
+        
+        /*
+        //POPUP TYPE 1
+        // Create the dialog
+        let popup = PopupDialog(title: title, message: "", image: image)
+        
+        // Create buttons
+        //        let buttonOne = CancelButton(title: "CANCEL") {
+        //            print("You canceled the car dialog.")
+        //        }
+        
+        let buttonTwo = DefaultButton(title: "Nailed it.") {
+            print("What a beauty!")
+        }
+        buttonTwo.buttonColor = UIColor.darkGrayColor()
+        buttonTwo.separatorColor = UIColor.clearColor()
+        buttonTwo.setCornerRadious(buttonTwo.frame.size.height/2)
+        
+        let buttonThree = DefaultButton(title: "I didn't get to it.", dismissOnTap: false, action: {
+            print("Ah, maybe next time :)")
+        })
+        
+        // Add buttons to dialog
+        // Alternatively, you can use popup.addButton(buttonOne)
+        // to add a single button
+        popup.addButtons([buttonTwo, buttonThree])
+        
+        // Present dialog
+        self.navigationController?.presentViewController(popup, animated: true, completion: nil)
+        */
+        
+        // Create a custom view controller
+        let ratingVC = RateAlertViewVC(nibName: "RateAlertViewVC", bundle: nil)
+        
+        // Create the dialog  - PopupDialogTransitionStyle
+        let popup = PopupDialog(viewController: ratingVC, buttonAlignment: .Vertical, transitionStyle: .BounceDown
+            , gestureDismissal: true) { 
+            print("Popup dismissed")
+        }
+        
+        ratingVC.submitAction = {
+            print("You rated \(ratingVC.ratingView.value) stars")
+            popup.dismiss()
+        }
+        
+        // Present dialog
+        self.navigationController?.presentViewController(popup, animated: true, completion: nil)
     }
     
     @IBAction func continueButton(sender: AnyObject)

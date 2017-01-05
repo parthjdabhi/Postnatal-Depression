@@ -38,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         if let isEligibleToUseOurApp = NSUserDefaults.standardUserDefaults().objectForKey("isEligibleToUseOurApp") as? String
-            where isEligibleToUseOurApp == "1"
+            where isEligibleToUseOurApp == "11"
         {
             print("User is Eligible To Use Our App")
             

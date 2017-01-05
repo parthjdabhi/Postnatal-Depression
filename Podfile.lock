@@ -46,6 +46,7 @@ PODS:
   - IQDropDownTextField (1.1.0)
   - IQKeyboardManagerSwift (4.0.5)
   - JSSAlertView (1.1.5)
+  - PopupDialog (0.3.3)
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
@@ -65,6 +66,7 @@ DEPENDENCIES:
   - IQDropDownTextField (~> 1.0)
   - IQKeyboardManagerSwift (= 4.0.5)
   - JSSAlertView (~> 1.1.5)
+  - PopupDialog (~> 0.3.3)
   - SDWebImage (~> 3.8)
   - SVProgressHUD (~> 2.0)
   - SWRevealViewController (~> 2.3)
@@ -87,11 +89,12 @@ SPEC CHECKSUMS:
   IQDropDownTextField: 614f79ca905529c992045eaa112d0fc9ebb875d1
   IQKeyboardManagerSwift: 41fd3a45a2cdb2a0e031af697708a95b865068a1
   JSSAlertView: 1ff5d4dcb28b00a38c0293c4c555231c02590be1
+  PopupDialog: d6e75fa780d1b3fb1a3044f885a2c6c4c13f10fe
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
   SWRevealViewController: 6d3fd97f70112fd7cef9de14df4260eacce4c63a
   UIActivityIndicator-for-SDWebImage: 7bf7ebbf0ed1747dedc0d6e949c4603a6d0f9e0c
 
-PODFILE CHECKSUM: 52489c6e1fb7a25fee9862a23f5746e8a66ffa40
+PODFILE CHECKSUM: 2a77ed6138749f93d00259435e62ddfe059c7c00
 
 COCOAPODS: 1.0.1

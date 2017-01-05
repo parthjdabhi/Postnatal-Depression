@@ -20,4 +20,6 @@ pod 'APNGKit', '~> 0.2.2'
 pod 'JSSAlertView', '~> 1.1.5'
 pod 'HCSStarRatingView', '~> 1.4.5'
 
+pod 'PopupDialog', '~> 0.3.3'
+
 end
