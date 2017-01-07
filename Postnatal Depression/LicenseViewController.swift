@@ -130,11 +130,9 @@ class LicenseViewController: UIViewController {
          self.navigationController?.presentViewController(popup, animated: true, completion: nil)
          */
         
-        
-        
+        /*
          //--------------------------------
          // Create a custom view controller
-         //let alertVC = AlertSubtext(nibName: "CustomAlertViewVC", bundle: nil)
          let alertVC = AlertSubtitleVC(nibName: "CustomAlertViewVC", bundle: nil, alertTitle: "Are you feeling diffrently?", alertSubTitle: "retakin an questionnnaire helps to identify if this app is helping", Button1Name: "Retake the questionarre", Button2name: "Let's do another activity")
          
          //alertVC.lblSubTitle.removeFromSuperview()
@@ -157,12 +155,12 @@ class LicenseViewController: UIViewController {
          
          // Present dialog
          self.navigationController?.presentViewController(popup, animated: true, completion: nil)
- 
+        */
+        
         
         /*
         //--------------------------------
         // Create a custom view controller
-        //let alertVC = AlertSubtext(nibName: "CustomAlertViewVC", bundle: nil)
         let alertVC = AlertSubtext(nibName: "CustomAlertViewVC", bundle: nil, alertTitle: "Making time is hard...", alertSubTitle: "Let's try it again!Here are common barriers mothers face when trying to complete an activity.",alertSubText: "No enough data.\nit seems hard.\nToo tired.\nNo childcare.\nThe baby doesent nap.\ni don't feel like going outside.", Button1Name: "I need help ovrcomming barriers", Button2name: "Let's do another activity")
         
         //alertVC.lblSubTitle.removeFromSuperview()
