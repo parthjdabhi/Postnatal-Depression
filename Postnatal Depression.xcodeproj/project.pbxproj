@@ -17,11 +17,15 @@
 		5E6CD5BF1E02B50D00730CD0 /* MainCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6CD5BE1E02B50D00730CD0 /* MainCategoryVC.swift */; };
 		5E6CD5C11E02BF2100730CD0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E6CD5C01E02BF2100730CD0 /* Images.xcassets */; };
 		5E6CD5C41E02C11400730CD0 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6CD5C31E02C11400730CD0 /* CategoryTableViewCell.swift */; };
+		5E73A8AA1E20ED9400DE95EE /* AlertTitleOnlyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E73A8A81E20ED9400DE95EE /* AlertTitleOnlyVC.swift */; };
+		5E73A8AB1E20ED9400DE95EE /* AlertTitleOnlyVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E73A8A91E20ED9400DE95EE /* AlertTitleOnlyVC.xib */; };
+		5E73A8AE1E21041000DE95EE /* AlertSubtitleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E73A8AC1E21041000DE95EE /* AlertSubtitleVC.swift */; };
+		5E73A8AF1E21041000DE95EE /* AlertSubtitleVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E73A8AD1E21041000DE95EE /* AlertSubtitleVC.xib */; };
 		5E84FC5A1E1BE00000AFF73B /* ListActivityRatesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E84FC591E1BE00000AFF73B /* ListActivityRatesVC.swift */; };
 		5E84FC5C1E1BE23D00AFF73B /* RateListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E84FC5B1E1BE23D00AFF73B /* RateListTableViewCell.swift */; };
 		5E84FC5F1E1BEA2000AFF73B /* AccomplishUnlikelyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E84FC5E1E1BEA2000AFF73B /* AccomplishUnlikelyVC.swift */; };
-		5E9F2C7C1E1E770200971C6D /* CustomAlertViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9F2C7A1E1E770200971C6D /* CustomAlertViewVC.swift */; };
-		5E9F2C7D1E1E770200971C6D /* CustomAlertViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E9F2C7B1E1E770200971C6D /* CustomAlertViewVC.xib */; };
+		5E9F2C7C1E1E770200971C6D /* AlertSubtext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9F2C7A1E1E770200971C6D /* AlertSubtext.swift */; };
+		5E9F2C7D1E1E770200971C6D /* AlertSubtext.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E9F2C7B1E1E770200971C6D /* AlertSubtext.xib */; };
 		5EAEB4B81E1D173C00766836 /* SomewhatLikelyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAEB4B71E1D173C00766836 /* SomewhatLikelyVC.swift */; };
 		5ECFCF001E1E51FE00801DA1 /* RateAlertViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECFCEFE1E1E51FE00801DA1 /* RateAlertViewVC.swift */; };
 		5ECFCF011E1E51FE00801DA1 /* RateAlertViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ECFCEFF1E1E51FE00801DA1 /* RateAlertViewVC.xib */; };
@@ -98,11 +102,15 @@
 		5E6CD5BE1E02B50D00730CD0 /* MainCategoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCategoryVC.swift; sourceTree = "<group>"; };
 		5E6CD5C01E02BF2100730CD0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5E6CD5C31E02C11400730CD0 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		5E73A8A81E20ED9400DE95EE /* AlertTitleOnlyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertTitleOnlyVC.swift; sourceTree = "<group>"; };
+		5E73A8A91E20ED9400DE95EE /* AlertTitleOnlyVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertTitleOnlyVC.xib; sourceTree = "<group>"; };
+		5E73A8AC1E21041000DE95EE /* AlertSubtitleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertSubtitleVC.swift; sourceTree = "<group>"; };
+		5E73A8AD1E21041000DE95EE /* AlertSubtitleVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertSubtitleVC.xib; sourceTree = "<group>"; };
 		5E84FC591E1BE00000AFF73B /* ListActivityRatesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListActivityRatesVC.swift; sourceTree = "<group>"; };
 		5E84FC5B1E1BE23D00AFF73B /* RateListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateListTableViewCell.swift; sourceTree = "<group>"; };
 		5E84FC5E1E1BEA2000AFF73B /* AccomplishUnlikelyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccomplishUnlikelyVC.swift; sourceTree = "<group>"; };
-		5E9F2C7A1E1E770200971C6D /* CustomAlertViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAlertViewVC.swift; sourceTree = "<group>"; };
-		5E9F2C7B1E1E770200971C6D /* CustomAlertViewVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomAlertViewVC.xib; sourceTree = "<group>"; };
+		5E9F2C7A1E1E770200971C6D /* AlertSubtext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertSubtext.swift; sourceTree = "<group>"; };
+		5E9F2C7B1E1E770200971C6D /* AlertSubtext.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertSubtext.xib; sourceTree = "<group>"; };
 		5EAEB4B71E1D173C00766836 /* SomewhatLikelyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SomewhatLikelyVC.swift; sourceTree = "<group>"; };
 		5ECFCEFE1E1E51FE00801DA1 /* RateAlertViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateAlertViewVC.swift; sourceTree = "<group>"; };
 		5ECFCEFF1E1E51FE00801DA1 /* RateAlertViewVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RateAlertViewVC.xib; sourceTree = "<group>"; };
@@ -235,8 +243,12 @@
 			children = (
 				5ECFCEFE1E1E51FE00801DA1 /* RateAlertViewVC.swift */,
 				5ECFCEFF1E1E51FE00801DA1 /* RateAlertViewVC.xib */,
-				5E9F2C7A1E1E770200971C6D /* CustomAlertViewVC.swift */,
-				5E9F2C7B1E1E770200971C6D /* CustomAlertViewVC.xib */,
+				5E73A8A81E20ED9400DE95EE /* AlertTitleOnlyVC.swift */,
+				5E73A8A91E20ED9400DE95EE /* AlertTitleOnlyVC.xib */,
+				5E73A8AC1E21041000DE95EE /* AlertSubtitleVC.swift */,
+				5E73A8AD1E21041000DE95EE /* AlertSubtitleVC.xib */,
+				5E9F2C7A1E1E770200971C6D /* AlertSubtext.swift */,
+				5E9F2C7B1E1E770200971C6D /* AlertSubtext.xib */,
 			);
 			name = "Custom AlertView";
 			sourceTree = "<group>";
@@ -487,10 +499,12 @@
 				DA7C7A561E00EAB300F2DC7C /* Reminder1.png in Resources */,
 				DA7C7A261E00DBC400F2DC7C /* LaunchScreen.storyboard in Resources */,
 				DA7C7A591E00EBF300F2DC7C /* GetStarted.png in Resources */,
+				5E73A8AF1E21041000DE95EE /* AlertSubtitleVC.xib in Resources */,
 				5ECFCF011E1E51FE00801DA1 /* RateAlertViewVC.xib in Resources */,
 				5E1BB5031E040D9C005B933F /* NormalCell.xib in Resources */,
 				DA7C7A871E0122D800F2DC7C /* Question2Background.png in Resources */,
 				5E1BB5041E040D9C005B933F /* ValuePickerCell.xib in Resources */,
+				5E73A8AB1E20ED9400DE95EE /* AlertTitleOnlyVC.xib in Resources */,
 				DA7C7A571E00EAB300F2DC7C /* Reminder2.png in Resources */,
 				DA7C7A5B1E0108E300F2DC7C /* ReminderCopy.png in Resources */,
 				DA7C7A231E00DBC400F2DC7C /* Assets.xcassets in Resources */,
@@ -501,7 +515,7 @@
 				DA7C7A5F1E010C4A00F2DC7C /* ReminderNext.png in Resources */,
 				DA7C7A1E1E00DBC400F2DC7C /* Main.storyboard in Resources */,
 				DA7C7A6D1E0117AF00F2DC7C /* Question1Background.png in Resources */,
-				5E9F2C7D1E1E770200971C6D /* CustomAlertViewVC.xib in Resources */,
+				5E9F2C7D1E1E770200971C6D /* AlertSubtext.xib in Resources */,
 				DA7C7A6B1E01144500F2DC7C /* ContinueButton.png in Resources */,
 				DA7C7A4D1E00E91D00F2DC7C /* Landing.png in Resources */,
 			);
@@ -597,6 +611,7 @@
 				DA7C7A7D1E01197A00F2DC7C /* ScoreQuestion8ViewController.swift in Sources */,
 				DA7C7A611E010C5B00F2DC7C /* ReminderNextViewController.swift in Sources */,
 				DA7C7A531E00EA4000F2DC7C /* Reminder2ViewController.swift in Sources */,
+				5E73A8AE1E21041000DE95EE /* AlertSubtitleVC.swift in Sources */,
 				5E58EC8E1E055BC700AF3ADC /* RateTableViewCell.swift in Sources */,
 				DA7C7A211E00DBC400F2DC7C /* Postnatal_Depression.xcdatamodeld in Sources */,
 				DA7C7A671E01111300F2DC7C /* LicenseViewController.swift in Sources */,
@@ -604,12 +619,13 @@
 				DA7C7A771E01196900F2DC7C /* ScoreQuestion5ViewController.swift in Sources */,
 				DA7C7A711E01195000F2DC7C /* ScoreQuestion2ViewController.swift in Sources */,
 				5E6CD5C41E02C11400730CD0 /* CategoryTableViewCell.swift in Sources */,
+				5E73A8AA1E20ED9400DE95EE /* AlertTitleOnlyVC.swift in Sources */,
 				5E58EC8A1E05544400AF3ADC /* RateActivitiesVC.swift in Sources */,
 				5EAEB4B81E1D173C00766836 /* SomewhatLikelyVC.swift in Sources */,
 				5ED480721E1A74D700C3FE15 /* Extensions.swift in Sources */,
 				5E84FC5F1E1BEA2000AFF73B /* AccomplishUnlikelyVC.swift in Sources */,
 				DA7C7A4F1E00EA0900F2DC7C /* LandingViewController.swift in Sources */,
-				5E9F2C7C1E1E770200971C6D /* CustomAlertViewVC.swift in Sources */,
+				5E9F2C7C1E1E770200971C6D /* AlertSubtext.swift in Sources */,
 				DA7C7A5D1E010B0000F2DC7C /* ReminderViewController.swift in Sources */,
 				5E84FC5A1E1BE00000AFF73B /* ListActivityRatesVC.swift in Sources */,
 				DA7C7A4A1E00E27300F2DC7C /* ScoreQuestionsViewController.swift in Sources */,

@@ -67,6 +67,8 @@ final public class PopupDialog: UIViewController {
     /// Whether or not to shift view for keyboard display
     public var keyboardShiftsView = true
 
+    public var popupViewAdditionalSetup: (() -> Void)? = nil
+    
     // MARK: - Initializers
 
     /*!
@@ -136,12 +138,13 @@ final public class PopupDialog: UIViewController {
         // Add our custom view to the container
         popupContainerView.stackView.insertArrangedSubview(viewController.view, atIndex: 0)
 
-        popupContainerView.stackView.layoutMargins = UIEdgeInsets(top: 0, left: 20, bottom: 4, right: 20)
-        popupContainerView.stackView.layoutMarginsRelativeArrangement = true
-        popupContainerView.stackView.spacing = 4
-        //popupContainerView.stackView.alignment = .Fill
-        popupContainerView.stackView.distribution = .EqualSpacing
+        popupViewAdditionalSetup?()
         
+//        popupContainerView.stackView.layoutMargins = UIEdgeInsets(top: 0, left: 20, bottom: 4, right: 20)
+//        popupContainerView.stackView.layoutMarginsRelativeArrangement = true
+//        popupContainerView.stackView.spacing = 4
+//        //popupContainerView.stackView.alignment = .Fill
+//        popupContainerView.stackView.distribution = .EqualSpacing
         
         // Set button alignment
         popupContainerView.buttonStackView.axis = buttonAlignment

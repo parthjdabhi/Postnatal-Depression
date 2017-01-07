@@ -53,6 +53,7 @@ class LicenseViewController: UIViewController {
         }
         
         /*
+        //--------------------------------
         //POPUP TYPE 1
         // Create the dialog
         let popup = PopupDialog(title: title, message: "", image: image)
@@ -82,6 +83,8 @@ class LicenseViewController: UIViewController {
         self.navigationController?.presentViewController(popup, animated: true, completion: nil)
         */
         
+        /*
+        //--------------------------------
         // Create a custom view controller
         let ratingVC = RateAlertViewVC(nibName: "RateAlertViewVC", bundle: nil)
         
@@ -98,6 +101,93 @@ class LicenseViewController: UIViewController {
         
         // Present dialog
         self.navigationController?.presentViewController(popup, animated: true, completion: nil)
+        */
+        
+        /*
+         //--------------------------------
+         // Create a custom view controller
+         let alertVC = AlertTitleOnlyVC(nibName: "AlertTitleOnlyVC", bundle: nil, alertTitle: "Activity completed?", Button1Name: "Nailed it.", Button2name: "I didn't get to it.")
+         
+         //alertVC.lblSubTitle.removeFromSuperview()
+         
+         // Create the dialog  - PopupDialogTransitionStyle
+         let popup = PopupDialog(viewController: alertVC, buttonAlignment: .Vertical, transitionStyle: .BounceDown
+         , gestureDismissal: true) {
+         print("Popup dismissed")
+         }
+         
+         alertVC.actionBtn1Tapped = {
+         print("You tapped button1")
+         popup.dismiss()
+         }
+         
+         alertVC.actionBtn2Tapped = {
+         print("You tapped button2")
+         popup.dismiss()
+         }
+         
+         // Present dialog
+         self.navigationController?.presentViewController(popup, animated: true, completion: nil)
+         */
+        
+        
+        
+         //--------------------------------
+         // Create a custom view controller
+         //let alertVC = AlertSubtext(nibName: "CustomAlertViewVC", bundle: nil)
+         let alertVC = AlertSubtitleVC(nibName: "CustomAlertViewVC", bundle: nil, alertTitle: "Are you feeling diffrently?", alertSubTitle: "retakin an questionnnaire helps to identify if this app is helping", Button1Name: "Retake the questionarre", Button2name: "Let's do another activity")
+         
+         //alertVC.lblSubTitle.removeFromSuperview()
+         
+         // Create the dialog  - PopupDialogTransitionStyle
+         let popup = PopupDialog(viewController: alertVC, buttonAlignment: .Vertical, transitionStyle: .BounceDown
+         , gestureDismissal: true) {
+         print("Popup dismissed")
+         }
+         
+         alertVC.actionBtn1Tapped = {
+         print("You tapped button1")
+         popup.dismiss()
+         }
+         
+         alertVC.actionBtn2Tapped = {
+         print("You tapped button2")
+         popup.dismiss()
+         }
+         
+         // Present dialog
+         self.navigationController?.presentViewController(popup, animated: true, completion: nil)
+ 
+        
+        /*
+        //--------------------------------
+        // Create a custom view controller
+        //let alertVC = AlertSubtext(nibName: "CustomAlertViewVC", bundle: nil)
+        let alertVC = AlertSubtext(nibName: "CustomAlertViewVC", bundle: nil, alertTitle: "Making time is hard...", alertSubTitle: "Let's try it again!Here are common barriers mothers face when trying to complete an activity.",alertSubText: "No enough data.\nit seems hard.\nToo tired.\nNo childcare.\nThe baby doesent nap.\ni don't feel like going outside.", Button1Name: "I need help ovrcomming barriers", Button2name: "Let's do another activity")
+        
+        //alertVC.lblSubTitle.removeFromSuperview()
+        
+        // Create the dialog  - PopupDialogTransitionStyle
+        let popup = PopupDialog(viewController: alertVC, buttonAlignment: .Vertical, transitionStyle: .BounceDown
+        , gestureDismissal: true) {
+            print("Popup dismissed")
+        }
+        
+        alertVC.actionBtn1Tapped = {
+            print("You tapped button1")
+            popup.dismiss()
+        }
+        
+        alertVC.actionBtn2Tapped = {
+            print("You tapped button2")
+            popup.dismiss()
+        }
+        
+        // Present dialog
+        self.navigationController?.presentViewController(popup, animated: true, completion: nil)
+        */
+        
+        
     }
     
     @IBAction func continueButton(sender: AnyObject)
