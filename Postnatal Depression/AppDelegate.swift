@@ -10,12 +10,14 @@ import UIKit
 import CoreData
 import IQKeyboardManagerSwift
 import JSSAlertView
+import PopupDialog
 
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var storyBoard: UIStoryboard?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
@@ -23,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         UIApplication.sharedApplication().statusBarStyle = .LightContent
         
+        storyBoard = UIStoryboard(name: "Main", bundle: nil)
         
         //Local Notification
         let notificationSettings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil)
@@ -32,7 +35,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let options = launchOptions {
             let value = options[UIApplicationLaunchOptionsLocalNotificationKey] as? UILocalNotification
             if let notification = value {
-                self.application(application, didReceiveLocalNotification: notification)
+                delay(3, closure: {
+                    self.application(application, didReceiveLocalNotification: notification)
+                })
             }
         }
         
@@ -95,22 +100,86 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             //let alertNotification = UIAlertView(title: "Title", message: notification.alertBody ?? "Title", delegate: nil, cancelButtonTitle: "Okay")
             //alertNotification.show()
             
-            JSSAlertView().info(UIApplication.topViewController()!, title: "Notification", text: notification.alertBody, buttonText: "Nailed it", buttonAction: {
-                print("Call..")
-                }, cancelButtonText: "Ididn't get to it", delay: nil)
+//            JSSAlertView().info(UIApplication.topViewController()!, title: "Notification", text: notification.alertBody, buttonText: "Nailed it", buttonAction: {
+//                print("Call..")
+//                }, cancelButtonText: "Ididn't get to it", delay: nil)
             
         } else {
             //App opened from Notification
-            if let alertType = notification.userInfo?["RemiderType"] as? String where alertType == "EndActivity" {
-                let alertNotification = UIAlertView()
-                alertNotification.title = notification.alertBody ?? "Title"
-                alertNotification.show()
-            } else {
-                JSSAlertView().info(UIApplication.topViewController()!, title: "Notification", text: notification.alertBody, buttonText: "Nailed it", buttonAction: {
-                    print("Call..")
-                    }, cancelButtonText: "Ididn't get to it", delay: nil)
-            }
+//            if let alertType = notification.userInfo?["RemiderType"] as? String where alertType == "EndActivity" {
+//                let alertNotification = UIAlertView()
+//                alertNotification.title = notification.alertBody ?? "Title"
+//                alertNotification.show()
+//            } else {
+//                JSSAlertView().info(UIApplication.topViewController()!, title: "Notification", text: notification.alertBody, buttonText: "Nailed it", buttonAction: {
+//                    print("Call..")
+//                    }, cancelButtonText: "Ididn't get to it", delay: nil)
+//            }
         }
+        
+        let alertVC = AlertTitleOnlyVC(nibName: "AlertTitleOnlyVC", bundle: nil, alertTitle: "Activity completed?", Button1Name: "Nailed it.", Button2name: "I didn't get to it.")
+        
+        //alertVC.lblSubTitle.removeFromSuperview()
+        
+        let popup = PopupDialog(viewController: alertVC, buttonAlignment: .Vertical, transitionStyle: .BounceDown
+        , gestureDismissal: true) {
+            print("Popup dismissed")
+        }
+        
+        alertVC.actionBtn1Tapped = {
+            print("You tapped button1")
+            popup.dismiss({
+                let alertVC = AlertSubtext(nibName: "CustomAlertViewVC", bundle: nil, alertTitle: "Making time is hard...", alertSubTitle: "Let's try it again!Here are common barriers mothers face when trying to complete an activity.",alertSubText: "No enough data.\nit seems hard.\nToo tired.\nNo childcare.\nThe baby doesent nap.\ni don't feel like going outside.", Button1Name: "I need help ovrcomming barriers", Button2name: "Let's do another activity")
+                
+                // Create the dialog  - PopupDialogTransitionStyle
+                let popup = PopupDialog(viewController: alertVC, buttonAlignment: .Vertical, transitionStyle: .BounceDown
+                , gestureDismissal: true) {
+                    print("Popup dismissed")
+                }
+                
+                alertVC.actionBtn1Tapped = {
+                    print("You tapped button1")
+                    popup.dismiss({ 
+                        let vc = self.storyBoard?.instantiateViewControllerWithIdentifier("SomewhatLikelyVC") as? SomewhatLikelyVC
+                        UIApplication.topViewController()?.navigationController?.pushViewController(vc!, animated: true)
+                    })
+                }
+                
+                alertVC.actionBtn2Tapped = {
+                    print("You tapped button2")
+                    popup.dismiss({ 
+                        let vc = self.storyBoard?.instantiateViewControllerWithIdentifier("ListActivityRatesVC") as? ListActivityRatesVC
+                        UIApplication.topViewController()?.navigationController?.pushViewController(vc!, animated: true)
+                    })
+                }
+                
+                UIApplication.topViewController()?.navigationController?.presentViewController(popup, animated: true, completion: nil)
+            })
+        }
+        
+        alertVC.actionBtn2Tapped = {
+            print("You tapped button2")
+            
+            popup.dismiss(
+                {
+                let ratingVC = RateAlertViewVC(nibName: "RateAlertViewVC", bundle: nil)
+                let popup = PopupDialog(viewController: ratingVC, buttonAlignment: .Vertical, transitionStyle: .BounceDown
+                , gestureDismissal: true) {
+                    print("Popup dismissed")
+                }
+                
+                ratingVC.submitAction = {
+                    print("You rated \(ratingVC.ratingView.value) stars")
+                    popup.dismiss({ 
+                        let vc = self.storyBoard?.instantiateViewControllerWithIdentifier("ListActivityRatesVC") as? ListActivityRatesVC
+                        UIApplication.topViewController()?.navigationController?.pushViewController(vc!, animated: true)
+                    })
+                }
+                UIApplication.topViewController()?.navigationController?.presentViewController(popup, animated: true, completion: nil)
+            })
+        }
+        
+        UIApplication.topViewController()?.navigationController?.presentViewController(popup, animated: true, completion: nil)
     }
     
     func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forLocalNotification notification: UILocalNotification, completionHandler: () -> Void) {
@@ -125,9 +194,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         completionHandler()
     }
     
-    
-    
-
     // MARK: - Core Data stack
 
     lazy var applicationDocumentsDirectory: NSURL = {

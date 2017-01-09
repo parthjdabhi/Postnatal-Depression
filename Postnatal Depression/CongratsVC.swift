@@ -64,7 +64,7 @@ class CongratsVC: UIViewController {
         endANotification.alertAction = "EndActivity"
         endANotification.soundName = UILocalNotificationDefaultSoundName
         endANotification.userInfo = ["RemiderType": "EndActivity", "UUID": "reminderID"]
-        UIApplication.sharedApplication().scheduleLocalNotification(endANotification)
+        //UIApplication.sharedApplication().scheduleLocalNotification(endANotification)
         
         
         guard let settings = UIApplication.sharedApplication().currentUserNotificationSettings() else { return }

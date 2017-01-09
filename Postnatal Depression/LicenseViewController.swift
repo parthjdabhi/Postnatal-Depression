@@ -23,13 +23,6 @@ class LicenseViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        // Prepare the popup assets
-        let title = "Activity completed?"
-        let message = "This is the message section of the popup dialog default view"
-        let image = UIImage(named: "pexels-photo-103290")
-        
-        
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,9 +45,11 @@ class LicenseViewController: UIViewController {
             sender.setImage(UIImage(named: "ic_uncheck")!, forState: UIControlState.Normal)
         }
         
+        // This Code is omnly added for testing diffrent custom alertview without waiting to local notification
+        
         /*
         //--------------------------------
-        //POPUP TYPE 1
+        // POPUP TYPE 1
         // Create the dialog
         let popup = PopupDialog(title: title, message: "", image: image)
         

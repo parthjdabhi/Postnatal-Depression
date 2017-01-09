@@ -210,6 +210,8 @@ extension Double {
     }
 }
 
+// MARK: - Date
+
 extension NSDate {
     
     func getElapsedInterval() -> String {
